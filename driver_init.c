@@ -43,7 +43,7 @@ void delay_driver_init(void)
 
 void system_init(void)
 {
-	init_mcu();
+	// init_mcu();  // did this in main.c
 
 	// GPIO on PA06
 
@@ -89,5 +89,5 @@ void system_init(void)
 
 	USART_0_init();
 
-	delay_driver_init();
+        delay_driver_init();
 }
