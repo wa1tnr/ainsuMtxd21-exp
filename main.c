@@ -34,7 +34,7 @@ int main(void) {
 
     /* Replace with your application code */
     while (1) {
-        blink();
-        toggle_d11();
+        // blink();
+        toggle_d11(); // 1.47 MHz current program development iteration
     }
 }
