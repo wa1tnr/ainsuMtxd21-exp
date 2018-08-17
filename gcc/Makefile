@@ -56,7 +56,6 @@ hpl/sysctrl/hpl_sysctrl.o \
 hal/src/hal_usart_sync.o \
 hpl/gclk/hpl_gclk.o \
 hal/src/hal_init.o \
-main.o \
 samd21a/gcc/system_samd21.o \
 examples/driver_examples.o \
 driver_init.o \
@@ -65,7 +64,9 @@ hal/src/hal_gpio.o \
 hal/utils/src/utils_event.o \
 hal/src/hal_sleep.o \
 atmel_start.o \
-hal/src/hal_atomic.o
+hal/src/hal_atomic.o \
+pins.o \
+main.o
 
 OBJS_AS_ARGS +=  \
 "hal/src/hal_io.o" \
@@ -83,7 +84,6 @@ OBJS_AS_ARGS +=  \
 "hal/src/hal_usart_sync.o" \
 "hpl/gclk/hpl_gclk.o" \
 "hal/src/hal_init.o" \
-"main.o" \
 "samd21a/gcc/system_samd21.o" \
 "examples/driver_examples.o" \
 "driver_init.o" \
@@ -92,7 +92,9 @@ OBJS_AS_ARGS +=  \
 "hal/utils/src/utils_event.o" \
 "hal/src/hal_sleep.o" \
 "atmel_start.o" \
-"hal/src/hal_atomic.o"
+"hal/src/hal_atomic.o" \
+"pins.o" \
+"main.o"
 
 # List the dependency files
 DEPS := $(OBJS:%.o=%.d)
@@ -115,14 +117,15 @@ DEPS_AS_ARGS +=  \
 "hal/src/hal_usart_sync.d" \
 "driver_init.d" \
 "samd21a/gcc/system_samd21.d" \
-"main.d" \
 "examples/driver_examples.d" \
 "hal/src/hal_sleep.d" \
 "hpl/sercom/hpl_sercom.d" \
 "hal/utils/src/utils_event.d" \
 "hal/src/hal_atomic.d" \
 "hpl/pm/hpl_pm.d" \
-"atmel_start.d"
+"atmel_start.d" \
+"pins.o" \
+"main.d"
 
 OUTPUT_FILE_NAME :=AtmelStart
 QUOTE := "
@@ -137,6 +140,7 @@ vpath %.S ../
 all: $(SUB_DIRS) $(OUTPUT_FILE_PATH)
 
 # Linker target
+# -T"../samd21a/gcc/gcc/samd21g18a_flash.ld" \
 
 $(OUTPUT_FILE_PATH): $(OBJS)
 	@echo Building target: $@
@@ -144,7 +148,7 @@ $(OUTPUT_FILE_PATH): $(OBJS)
 	$(QUOTE)arm-none-eabi-gcc$(QUOTE) -o $(OUTPUT_FILE_NAME).elf $(OBJS_AS_ARGS) -Wl,--start-group -lm -Wl,--end-group -mthumb \
 -Wl,-Map="$(OUTPUT_FILE_NAME).map" --specs=nano.specs -Wl,--gc-sections -mcpu=cortex-m0plus \
  \
--T"../samd21a/gcc/gcc/samd21g18a_flash.ld" \
+-T"../samd21a/gcc/gcc/samd21g18a_flash_with_bootloader.ld" \
 -L"../samd21a/gcc/gcc"
 	@echo Finished building target: $@
 
@@ -200,6 +204,10 @@ endif
 
 $(SUB_DIRS):
 	$(MK_DIR) "$@"
+
+install:
+	# running target 'make install' now
+	./scripts/_bossac_local.sh ./AtmelStart.bin
 
 clean:
 	rm -f $(OBJS_AS_ARGS)
