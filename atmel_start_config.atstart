@@ -474,7 +474,7 @@ drivers:
       dfll48m_arch_usbcrm: false
       dfll48m_arch_waitlock: false
       dfll48m_mode: Closed Loop Mode
-      dfll48m_mul: 0
+      dfll48m_mul: 14
       dfll48m_ref_clock: Generic clock generator 3
       dfll_arch_cstep: 1
       dfll_arch_fstep: 1
@@ -513,7 +513,7 @@ drivers:
       osculp32k_arch_wrtlock: false
       xosc32k_arch_aampen: false
       xosc32k_arch_en1k: false
-      xosc32k_arch_en32k: false
+      xosc32k_arch_en32k: true
       xosc32k_arch_enable: true
       xosc32k_arch_ondemand: true
       xosc32k_arch_runstdby: false
