@@ -2,3 +2,6 @@ canonical_atme*
 main.c__*
 xdat*
 gcc/Makefile__
+a*.zip
+a*.atzip
+gcc/

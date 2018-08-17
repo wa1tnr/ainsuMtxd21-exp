@@ -68,7 +68,6 @@
         <file category="header" condition="ARMCC, GCC, IAR" name="hal/include/hpl_spi_s_async.h"/>
         <file category="header" condition="ARMCC, GCC, IAR" name="hal/include/hpl_spi_s_sync.h"/>
         <file category="header" condition="ARMCC, GCC, IAR" name="hal/include/hpl_spi_sync.h"/>
-        <file category="header" condition="ARMCC, GCC, IAR" name="hal/include/hpl_time_measure.h"/>
         <file category="header" condition="ARMCC, GCC, IAR" name="hal/include/hpl_usart.h"/>
         <file category="source" condition="ARMCC, GCC, IAR" name="hal/src/hal_atomic.c"/>
         <file category="source" condition="ARMCC, GCC, IAR" name="hal/src/hal_delay.c"/>
@@ -139,7 +138,6 @@
         <file category="header" condition="ARMCC, GCC, IAR" name="hpl/port/hpl_gpio_base.h"/>
         <file category="source" condition="ARMCC, GCC, IAR" name="hpl/sercom/hpl_sercom.c"/>
         <file category="source" condition="ARMCC, GCC, IAR" name="hpl/sysctrl/hpl_sysctrl.c"/>
-        <file category="source" condition="ARMCC, GCC, IAR" name="hpl/systick/hpl_systick.c"/>
         <file category="header" condition="ARMCC, GCC, IAR" name="atmel_start.h"/>
         <file category="source" condition="ARMCC, GCC, IAR" name="atmel_start.c"/>
         <file attr="config" category="header" condition="ARMCC, GCC, IAR" name="config/hpl_dmac_config.h"/>
@@ -147,7 +145,6 @@
         <file attr="config" category="header" condition="ARMCC, GCC, IAR" name="config/hpl_pm_config.h"/>
         <file attr="config" category="header" condition="ARMCC, GCC, IAR" name="config/hpl_sercom_config.h"/>
         <file attr="config" category="header" condition="ARMCC, GCC, IAR" name="config/hpl_sysctrl_config.h"/>
-        <file attr="config" category="header" condition="ARMCC, GCC, IAR" name="config/hpl_systick_config.h"/>
         <file attr="config" category="header" condition="ARMCC, GCC, IAR" name="config/peripheral_clk_config.h"/>
         <file category="include" condition="ARMCC, GCC, IAR" name=""/>
         <file category="include" condition="ARMCC, GCC, IAR" name="config"/>
@@ -161,7 +158,6 @@
         <file category="include" condition="ARMCC, GCC, IAR" name="hpl/port"/>
         <file category="include" condition="ARMCC, GCC, IAR" name="hpl/sercom"/>
         <file category="include" condition="ARMCC, GCC, IAR" name="hpl/sysctrl"/>
-        <file category="include" condition="ARMCC, GCC, IAR" name="hpl/systick"/>
         <file category="include" condition="ARMCC, GCC, IAR" name="hri"/>
         <file category="include" condition="ARMCC, GCC, IAR" name=""/>
       </files>

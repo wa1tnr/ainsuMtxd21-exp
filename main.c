@@ -2,11 +2,10 @@
 #include "driver_examples.h"
 #include "pins.h"
 
-// #define   WASTED     2104
-#define      WASTED    21044
+#define WASTED_TIME 21040
 
 void waste(void) { // time and resources
-    for (volatile int i=(8 * WASTED); i>0; i--) {
+    for (volatile int i=(8 * WASTED_TIME); i>0; i--) {
     }
 }
 
@@ -19,22 +18,15 @@ void blink(void) {
 
 int main(void) {
     /* Initializes MCU, drivers and middleware */
-    // atmel_start_init(); // kills oscillators?
+    atmel_start_init();
     SystemInit();
-    // system_init(); // also kills oscillators?
-    // SystemCoreClockUpdate(); // SystemInit() does this
-
-
-    init_mcu();
-    // system_init();
-
     pins_setup();
 
-    // USART_0_example();
+    USART_0_example();
 
     /* Replace with your application code */
     while (1) {
-        // blink();
-        toggle_d11(); // 1.47 MHz current program development iteration
+        blink();
+        toggle_d11();
     }
 }

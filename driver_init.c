@@ -36,28 +36,9 @@ void USART_0_init(void)
 	USART_0_PORT_init();
 }
 
-void delay_driver_init(void)
-{
-	delay_init(SysTick);
-}
-
 void system_init(void)
 {
-	// init_mcu();  // did this in main.c
-
-	// GPIO on PA06
-
-	// Set pin direction to output
-	gpio_set_pin_direction(PA06, GPIO_DIRECTION_OUT);
-
-	gpio_set_pin_level(PA06,
-	                   // <y> Initial level
-	                   // <id> pad_initial_level
-	                   // <false"> Low
-	                   // <true"> High
-	                   false);
-
-	gpio_set_pin_function(PA06, GPIO_PIN_FUNCTION_OFF);
+	init_mcu();
 
 	// GPIO on PA16
 
@@ -88,6 +69,4 @@ void system_init(void)
 	gpio_set_pin_function(PA17, GPIO_PIN_FUNCTION_OFF);
 
 	USART_0_init();
-
-        delay_driver_init();
 }

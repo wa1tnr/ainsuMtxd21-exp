@@ -21,8 +21,3 @@ void USART_0_example(void)
 
 	io_write(io, (uint8_t *)"Hello World!", 12);
 }
-
-void delay_example(void)
-{
-	delay_ms(5000);
-}
