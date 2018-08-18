@@ -47,6 +47,10 @@
  * Initial system clock frequency. The System RC Oscillator (RCSYS) provides
  *  the source for the main clock at chip startup.
  */
+// ainsuForth kludge // wa1tnr // TODO:
+// #define __SYSTEM_CLOCK (1000000)
+// #define __SYSTEM_CLOCK (48000000)
+// back to factory setting, wa1tnr:
 #define __SYSTEM_CLOCK (1000000)
 
 uint32_t SystemCoreClock = __SYSTEM_CLOCK; /*!< System Clock Frequency (Core Clock)*/
