@@ -363,7 +363,6 @@
 #ifndef CONF_GCLK_SERCOM5_SLOW_FREQUENCY
 #define CONF_GCLK_SERCOM5_SLOW_FREQUENCY 400000
 #endif
-
 // <y> RTC Clock Source
 // <id> rtc_clk_selection
 
@@ -385,7 +384,7 @@
 
 // <i> Select the clock source for RTC.
 #ifndef CONF_GCLK_RTC_SRC
-#define CONF_GCLK_RTC_SRC GCLK_CLKCTRL_GEN_GCLK0_Val
+#define CONF_GCLK_RTC_SRC GCLK_CLKCTRL_GEN_GCLK2_Val
 #endif
 
 /**
@@ -449,7 +448,7 @@
 
 // <i> Select the clock source for DAC.
 #ifndef CONF_GCLK_DAC_SRC
-#define CONF_GCLK_DAC_SRC GCLK_CLKCTRL_GEN_GCLK0_Val
+#define CONF_GCLK_DAC_SRC GCLK_CLKCTRL_GEN_GCLK1_Val
 #endif
 
 /**
@@ -457,7 +456,7 @@
  * \brief DAC's Clock frequency
  */
 #ifndef CONF_GCLK_DAC_FREQUENCY
-#define CONF_GCLK_DAC_FREQUENCY 48000000
+#define CONF_GCLK_DAC_FREQUENCY 320000
 #endif
 
 // <y> USB Clock Source
