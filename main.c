@@ -17,6 +17,21 @@ void blink(void) {
     waste(); waste();
 }
 
+void shortpinwaste(void) { // short LED flasher
+        for (int index = 8; index > 0; index--) blink();
+}
+
+void pinwaste(void) {
+    for (int ji = 3; ji > 0; ji--) {
+        for (int index = 8; index > 0; index--) blink();
+        waste(); waste(); waste(); waste();
+        waste(); waste(); waste(); waste();
+        for (int index = 8; index > 0; index--) blink();
+        waste(); waste(); waste(); waste();
+        waste(); waste(); waste(); waste();
+    }
+}
+
 int main(void) {
     /* Initializes MCU, drivers and middleware */
     // atmel_start_init(); // calls system_init() from driver_init.c
@@ -33,14 +48,9 @@ int main(void) {
     // USART_0_example();
 
     /* Replace with your application code */
-    for (int ji = 3; ji > 0; ji--) {
-        for (int index = 8; index > 0; index--) blink();
-        waste(); waste(); waste(); waste();
-        waste(); waste(); waste(); waste();
-        for (int index = 8; index > 0; index--) blink();
-        waste(); waste(); waste(); waste();
-        waste(); waste(); waste(); waste();
-    }
+
+    // pinwaste(); // LED flasher
+    shortpinwaste();
 
     // turn on LED once and for all -- cannot attend to it further:
     PORT->Group[PORTA].OUTSET.reg |= (uint32_t)(1 << 17); // PA17 //  1 13 pinwrite  // D13 
