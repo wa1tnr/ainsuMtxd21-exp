@@ -19,14 +19,16 @@ void blink(void) {
 int main(void) {
     /* Initializes MCU, drivers and middleware */
     atmel_start_init();
-    SystemInit();
+    // SystemInit();
+    // SystemCoreClockUpdate();
+    init_mcu();
     pins_setup();
 
-    USART_0_example();
+    // USART_0_example();
 
     /* Replace with your application code */
     while (1) {
-        blink();
+        // blink();
         toggle_d11();
     }
 }
