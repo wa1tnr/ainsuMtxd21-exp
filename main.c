@@ -1,4 +1,5 @@
 #include <atmel_start.h>
+#include "board_init.h"
 #include "driver_examples.h"
 #include "pins.h"
 
@@ -18,17 +19,34 @@ void blink(void) {
 
 int main(void) {
     /* Initializes MCU, drivers and middleware */
-    // atmel_start_init();
-    SystemInit();
+    // atmel_start_init(); // calls system_init() from driver_init.c
+
+    // system_init();
+    // init_mcu(); // this works nicely for getting a pin toggle on D11 - 18 Aug 13:14 UTC
     // SystemCoreClockUpdate();
-    // init_mcu();
+    // SystemInit();
+
+    // system_init();
+    board_init(); // Dean Miller's code - imported from saw-saw
     pins_setup();
 
     // USART_0_example();
 
     /* Replace with your application code */
+    for (int ji = 3; ji > 0; ji--) {
+        for (int index = 8; index > 0; index--) blink();
+        waste(); waste(); waste(); waste();
+        waste(); waste(); waste(); waste();
+        for (int index = 8; index > 0; index--) blink();
+        waste(); waste(); waste(); waste();
+        waste(); waste(); waste(); waste();
+    }
+
+    // turn on LED once and for all -- cannot attend to it further:
+    PORT->Group[PORTA].OUTSET.reg |= (uint32_t)(1 << 17); // PA17 //  1 13 pinwrite  // D13 
+
+    // toggle D11 forever:
     while (1) {
-        // blink();
-        toggle_d11();
+        toggle_d11(); // 766 ns / 1.3 MHz
     }
 }
