@@ -80,7 +80,7 @@ drivers:
       gclk_gen_2_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
       gclk_gen_3_div: 1
       gclk_gen_3_div_sel: false
-      gclk_gen_3_oscillator: 32kHz External Crystal Oscillator (XOSC32K)
+      gclk_gen_3_oscillator: 32kHz High Accuracy Internal Oscillator (OSC32K)
       gclk_gen_4_div: 1
       gclk_gen_4_div_sel: false
       gclk_gen_4_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
@@ -469,11 +469,11 @@ drivers:
       dfll_arch_fstep: 1
       enable_dfll48m: true
       enable_fdpll96m: false
-      enable_osc32k: false
+      enable_osc32k: true
       enable_osc8m: false
       enable_osculp32k: false
       enable_xosc: false
-      enable_xosc32k: true
+      enable_xosc32k: false
       fdpll96m_arch_enable: false
       fdpll96m_arch_lbypass: false
       fdpll96m_arch_ondemand: true
@@ -485,7 +485,7 @@ drivers:
       osc32k_arch_calib: 0
       osc32k_arch_en1k: false
       osc32k_arch_en32k: false
-      osc32k_arch_enable: false
+      osc32k_arch_enable: true
       osc32k_arch_ondemand: true
       osc32k_arch_overwrite_calibration: false
       osc32k_arch_runstdby: false
@@ -503,7 +503,7 @@ drivers:
       xosc32k_arch_aampen: false
       xosc32k_arch_en1k: false
       xosc32k_arch_en32k: false
-      xosc32k_arch_enable: true
+      xosc32k_arch_enable: false
       xosc32k_arch_ondemand: true
       xosc32k_arch_runstdby: false
       xosc32k_arch_startup: 122 us
