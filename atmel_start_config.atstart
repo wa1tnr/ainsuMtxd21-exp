@@ -71,16 +71,16 @@ drivers:
       gclk_arch_gen_7_oov: false
       gclk_gen_0_div: 1
       gclk_gen_0_div_sel: false
-      gclk_gen_0_oscillator: Digital Frequency Locked Loop (DFLL48M)
+      gclk_gen_0_oscillator: 8MHz Internal Oscillator (OSC8M)
       gclk_gen_1_div: 1
       gclk_gen_1_div_sel: false
       gclk_gen_1_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
       gclk_gen_2_div: 1
       gclk_gen_2_div_sel: false
       gclk_gen_2_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
-      gclk_gen_3_div: 1
+      gclk_gen_3_div: 128
       gclk_gen_3_div_sel: false
-      gclk_gen_3_oscillator: 32kHz High Accuracy Internal Oscillator (OSC32K)
+      gclk_gen_3_oscillator: 8MHz Internal Oscillator (OSC8M)
       gclk_gen_4_div: 1
       gclk_gen_4_div_sel: false
       gclk_gen_4_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
@@ -453,7 +453,7 @@ drivers:
       dfll48m_arch_calibration: false
       dfll48m_arch_ccdis: false
       dfll48m_arch_coarse: 31
-      dfll48m_arch_enable: true
+      dfll48m_arch_enable: false
       dfll48m_arch_fine: 512
       dfll48m_arch_llaw: false
       dfll48m_arch_ondemand: true
@@ -467,10 +467,10 @@ drivers:
       dfll48m_ref_clock: Generic clock generator 3
       dfll_arch_cstep: 1
       dfll_arch_fstep: 1
-      enable_dfll48m: true
+      enable_dfll48m: false
       enable_fdpll96m: false
-      enable_osc32k: true
-      enable_osc8m: false
+      enable_osc32k: false
+      enable_osc8m: true
       enable_osculp32k: false
       enable_xosc: false
       enable_xosc32k: false
@@ -485,18 +485,18 @@ drivers:
       osc32k_arch_calib: 0
       osc32k_arch_en1k: false
       osc32k_arch_en32k: false
-      osc32k_arch_enable: true
+      osc32k_arch_enable: false
       osc32k_arch_ondemand: true
       osc32k_arch_overwrite_calibration: false
       osc32k_arch_runstdby: false
       osc32k_arch_startup: 3 Clock Cycles (92us)
       osc32k_arch_wrtlock: false
       osc8m_arch_calib: 0
-      osc8m_arch_enable: false
+      osc8m_arch_enable: true
       osc8m_arch_ondemand: true
       osc8m_arch_overwrite_calibration: false
       osc8m_arch_runstdby: false
-      osc8m_presc: '8'
+      osc8m_presc: '1'
       osculp32k_arch_calib: 0
       osculp32k_arch_overwrite_calibration: true
       osculp32k_arch_wrtlock: false
