@@ -35,13 +35,14 @@ int main(void) {
     /* Initializes MCU, drivers and middleware */
     atmel_start_init(); // calls system_init() from driver_init.c
     // init_mcu();
+    // SystemInit();
 
     pins_setup();
 
     // USART_0_example();
 
     // pinwaste(); // LED flasher
-    shortpinwaste();
+    // shortpinwaste();
 
     // turn on LED once and for all -- cannot attend to it further:
     PORT->Group[PORTA].OUTSET.reg |= (uint32_t)(1 << 17); // PA17 //  1 13 pinwrite  // D13 
