@@ -18,10 +18,10 @@ void blink(void) {
 
 int main(void) {
     /* Initializes MCU, drivers and middleware */
-    atmel_start_init();
-    // SystemInit();
+    // atmel_start_init();
+    SystemInit();
     // SystemCoreClockUpdate();
-    init_mcu();
+    // init_mcu();
     pins_setup();
 
     // USART_0_example();
