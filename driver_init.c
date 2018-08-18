@@ -68,5 +68,5 @@ void system_init(void)
 
 	gpio_set_pin_function(PA17, GPIO_PIN_FUNCTION_OFF);
 
-	// USART_0_init();
+	USART_0_init();
 }
