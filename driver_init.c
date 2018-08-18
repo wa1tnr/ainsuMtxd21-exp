@@ -19,9 +19,8 @@ void USART_0_CLOCK_init(void) {
 
 void USART_0_init(void) {
 	USART_0_CLOCK_init();
-        // this hangs:
 	usart_sync_init(&USART_0, SERCOM5, (void *)NULL); // hangs here except for init_mcu() path
-	// USART_0_PORT_init();
+	USART_0_PORT_init();
 }
 
 void system_init(void)
