@@ -120,7 +120,7 @@ drivers:
         configuration: {}
   USART_0:
     user_label: USART_0
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-AF::SERCOM5::driver_config_definition::UART::HAL:Driver:USART.Sync
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-AF::SERCOM0::driver_config_definition::UART::HAL:Driver:USART.Sync
     functionality: USART
     api: HAL:Driver:USART_Sync
     configuration:
@@ -147,11 +147,11 @@ drivers:
     variant:
       specification: TXPO=1, RXPO=3, CMODE=0
       required_signals:
-      - name: SERCOM5/PAD/2
-        pad: PB22
+      - name: SERCOM0/PAD/2
+        pad: PA10
         label: TX
-      - name: SERCOM5/PAD/3
-        pad: PB23
+      - name: SERCOM0/PAD/3
+        pad: PA11
         label: RX
     clocks:
       domain_group:
@@ -522,6 +522,18 @@ drivers:
     clocks:
       domain_group: null
 pads:
+  PA10:
+    name: PA10
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-AF::pad::PA10
+    mode: Peripheral IO
+    user_label: PA10
+    configuration: null
+  PA11:
+    name: PA11
+    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-AF::pad::PA11
+    mode: Peripheral IO
+    user_label: PA11
+    configuration: null
   PA16:
     name: PA16
     definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-AF::pad::PA16
@@ -533,17 +545,5 @@ pads:
     definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-AF::pad::PA17
     mode: Digital output
     user_label: PA17
-    configuration: null
-  PB22:
-    name: PB22
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-AF::pad::PB22
-    mode: Peripheral IO
-    user_label: PB22
-    configuration: null
-  PB23:
-    name: PB23
-    definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-AF::pad::PB23
-    mode: Peripheral IO
-    user_label: PB23
     configuration: null
 toolchain_options: []
