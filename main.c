@@ -33,8 +33,8 @@ void pinwaste(void) {
 
 int main(void) {
     /* Initializes MCU, drivers and middleware */
-    // atmel_start_init(); // calls system_init() from driver_init.c
-    init_mcu();
+    atmel_start_init(); // calls system_init() from driver_init.c
+    // init_mcu();
 
     pins_setup();
 
