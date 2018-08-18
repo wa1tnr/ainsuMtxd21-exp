@@ -38,6 +38,7 @@ hpl/sercom \
 examples \
 hpl/gclk \
 samd21a/gcc/gcc \
+src \
 hpl/core
 
 # List the object files
@@ -66,6 +67,7 @@ hal/utils/src/utils_event.o \
 hal/src/hal_sleep.o \
 atmel_start.o \
 hal/src/hal_atomic.o \
+src/dump.o \
 pins.o \
 main.o
 
@@ -94,6 +96,7 @@ OBJS_AS_ARGS +=  \
 "hal/src/hal_sleep.o" \
 "atmel_start.o" \
 "hal/src/hal_atomic.o" \
+"src/dump.o" \
 "pins.o" \
 "main.o"
 
@@ -125,6 +128,7 @@ DEPS_AS_ARGS +=  \
 "hal/src/hal_atomic.d" \
 "hpl/pm/hpl_pm.d" \
 "atmel_start.d" \
+"src/dump.d" \
 "pins.d" \
 "main.d"
 
