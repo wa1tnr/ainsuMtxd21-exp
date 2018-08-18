@@ -36,17 +36,20 @@ int main(void) {
     /* Initializes MCU, drivers and middleware */
     // SystemCoreClockUpdate();
     // SystemInit();
-    // atmel_start_init(); // calls system_init() from driver_init.c
+    atmel_start_init(); // calls system_init() from driver_init.c
 
     // SystemInit();
 
     // init_mcu(); // this works nicely for getting a pin toggle on D11 - 18 Aug 13:14 UTC
+
+/*
     system_init(); // calls init_mcu()
     board_init(); // Dean Miller's code - imported from saw-saw
 
     USART_0_CLOCK_init();
     usart_sync_init(&USART_0, SERCOM5, (void *)NULL);
     USART_0_PORT_init();
+*/
 
 
     // pins_setup();
