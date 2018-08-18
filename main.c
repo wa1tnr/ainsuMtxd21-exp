@@ -1,5 +1,4 @@
 #include <atmel_start.h>
-// #include "board_init.h"
 #include "driver_examples.h"
 #include "pins.h"
 

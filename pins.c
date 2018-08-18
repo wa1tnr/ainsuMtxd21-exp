@@ -2,6 +2,8 @@
 #include "atmel_start.h"
 #include "pins.h"
 
+// Pins:  PA16 (D11) and PA17 (D13/LED)
+
 void pins_setup(void) {
     PORT->Group[PORTA].DIRSET.reg  = (uint32_t)(1 << 16); // PA16 //  1 11 pinmode   // D11
     PORT->Group[PORTA].DIRSET.reg  = (uint32_t)(1 << 17); // PA17 //  1 13 pinmode   // D13
