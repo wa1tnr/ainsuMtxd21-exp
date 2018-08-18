@@ -36,18 +36,21 @@ int main(void) {
     /* Initializes MCU, drivers and middleware */
     // atmel_start_init(); // calls system_init() from driver_init.c
 
-    // system_init();
     // init_mcu(); // this works nicely for getting a pin toggle on D11 - 18 Aug 13:14 UTC
     // SystemCoreClockUpdate();
     // SystemInit();
 
     // system_init();
     board_init(); // Dean Miller's code - imported from saw-saw
+
+    system_init(); // calls init_mcu()
+
+    // init_mcu(); // this works nicely for getting a pin toggle on D11 - 18 Aug 13:14 UTC
+
+
     pins_setup();
 
     // USART_0_example();
-
-    /* Replace with your application code */
 
     // pinwaste(); // LED flasher
     shortpinwaste();
