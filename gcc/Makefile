@@ -58,6 +58,7 @@ hpl/gclk/hpl_gclk.o \
 hal/src/hal_init.o \
 samd21a/gcc/system_samd21.o \
 examples/driver_examples.o \
+examples/warm.o \
 driver_init.o \
 hpl/sercom/hpl_sercom.o \
 hal/src/hal_gpio.o \
@@ -85,6 +86,7 @@ OBJS_AS_ARGS +=  \
 "hal/src/hal_init.o" \
 "samd21a/gcc/system_samd21.o" \
 "examples/driver_examples.o" \
+"examples/warm.o" \
 "driver_init.o" \
 "hpl/sercom/hpl_sercom.o" \
 "hal/src/hal_gpio.o" \
@@ -113,6 +115,7 @@ DEPS_AS_ARGS +=  \
 "hpl/gclk/hpl_gclk.d" \
 "hal/src/hal_init.d" \
 "hal/src/hal_usart_sync.d" \
+"examples/warm.d" \
 "driver_init.d" \
 "samd21a/gcc/system_samd21.d" \
 "examples/driver_examples.d" \

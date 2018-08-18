@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+extern struct io_descriptor *io;
+
 void USART_0_example(void);
 
 #ifdef __cplusplus
