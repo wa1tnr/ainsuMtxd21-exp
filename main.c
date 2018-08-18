@@ -34,26 +34,27 @@ void pinwaste(void) {
 
 int main(void) {
     /* Initializes MCU, drivers and middleware */
-    // atmel_start_init(); // calls system_init() from driver_init.c
-
-    // init_mcu(); // this works nicely for getting a pin toggle on D11 - 18 Aug 13:14 UTC
     // SystemCoreClockUpdate();
     // SystemInit();
+    // atmel_start_init(); // calls system_init() from driver_init.c
 
-    // system_init();
-    board_init(); // Dean Miller's code - imported from saw-saw
-
-    system_init(); // calls init_mcu()
+    // SystemInit();
 
     // init_mcu(); // this works nicely for getting a pin toggle on D11 - 18 Aug 13:14 UTC
+    system_init(); // calls init_mcu()
+    board_init(); // Dean Miller's code - imported from saw-saw
+
+    USART_0_CLOCK_init();
+    usart_sync_init(&USART_0, SERCOM5, (void *)NULL);
+    USART_0_PORT_init();
 
 
-    pins_setup();
+    // pins_setup();
 
     USART_0_example();
 
     // pinwaste(); // LED flasher
-    shortpinwaste();
+    // shortpinwaste();
 
     // turn on LED once and for all -- cannot attend to it further:
     PORT->Group[PORTA].OUTSET.reg |= (uint32_t)(1 << 17); // PA17 //  1 13 pinwrite  // D13 
@@ -63,3 +64,11 @@ int main(void) {
         toggle_d11(); // 766 ns / 1.3 MHz
     }
 }
+
+
+// struct usart_sync_descriptor USART_0;
+
+// USART_0_init();
+    // USART_0_CLOCK_init();
+    // usart_sync_init(&USART_0, SERCOM5, (void *)NULL);
+    // USART_0_PORT_init();
