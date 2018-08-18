@@ -377,7 +377,7 @@
 // <i> Indicates whether configuration for OSCULP32K is enabled or not
 // <id> enable_osculp32k
 #ifndef CONF_OSCULP32K_CONFIG
-#define CONF_OSCULP32K_CONFIG 1
+#define CONF_OSCULP32K_CONFIG 0
 #endif
 
 // <h> 32kHz Ultra Low Power Internal Oscillator (OSCULP32K) Control
@@ -392,7 +392,7 @@
 //   <i> Overwrite Default Osc Calibration
 // <id> osculp32k_arch_overwrite_calibration
 #ifndef CONF_OSCULP32K_OVERWRITE_CALIBRATION
-#define CONF_OSCULP32K_OVERWRITE_CALIBRATION 0
+#define CONF_OSCULP32K_OVERWRITE_CALIBRATION 1
 #endif
 
 //  <o>Osc Calibration Value <0-255>
@@ -400,7 +400,7 @@
 //  <i> Default: 0
 // <id> osculp32k_arch_calib
 #ifndef CONF_OSCULP32K_CALIB
-#define CONF_OSCULP32K_CALIB 0
+#define CONF_OSCULP32K_CALIB 1
 #endif
 
 // </h>
