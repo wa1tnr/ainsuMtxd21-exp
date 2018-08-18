@@ -26,7 +26,7 @@ drivers:
       enable_gclk_gen_2: false
       enable_gclk_gen_3: true
       enable_gclk_gen_4: false
-      enable_gclk_gen_5: false
+      enable_gclk_gen_5: true
       enable_gclk_gen_6: false
       enable_gclk_gen_7: false
       gclk_arch_gen_0_RUNSTDBY: false
@@ -55,7 +55,7 @@ drivers:
       gclk_arch_gen_4_oe: false
       gclk_arch_gen_4_oov: false
       gclk_arch_gen_5_RUNSTDBY: false
-      gclk_arch_gen_5_enable: false
+      gclk_arch_gen_5_enable: true
       gclk_arch_gen_5_idc: false
       gclk_arch_gen_5_oe: false
       gclk_arch_gen_5_oov: false
@@ -86,7 +86,7 @@ drivers:
       gclk_gen_4_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
       gclk_gen_5_div: 1
       gclk_gen_5_div_sel: false
-      gclk_gen_5_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
+      gclk_gen_5_oscillator: 32kHz Ultra Low Power Internal Oscillator (OSCULP32K)
       gclk_gen_6_div: 1
       gclk_gen_6_div_sel: false
       gclk_gen_6_oscillator: External Crystal Oscillator 0.4-32MHz (XOSC)
@@ -159,10 +159,10 @@ drivers:
         - name: Core
           input: Generic clock generator 0
         - name: Slow
-          input: Generic clock generator 3
+          input: Generic clock generator 5
         configuration:
           core_gclk_selection: Generic clock generator 0
-          slow_gclk_selection: Generic clock generator 3
+          slow_gclk_selection: Generic clock generator 5
   DMAC:
     user_label: DMAC
     definition: Atmel:SAMD21_Drivers:0.0.1::SAMD21G18A-AF::DMAC::driver_config_definition::DMAC::HAL:HPL:DMAC
