@@ -50,7 +50,7 @@ int main(void) {
 
     pins_setup();
 
-    // USART_0_example();
+    USART_0_example();
 
     // pinwaste(); // LED flasher
     shortpinwaste();
