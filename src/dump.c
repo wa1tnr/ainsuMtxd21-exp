@@ -165,18 +165,15 @@ uint8_t* cdump(void) {
     ram = (char*)p;
 
  // sprintf(buffer, "%4x", p);
-    strcpy(buffer, (char *) p);
+ //   strcpy(buffer, (char *) p);
 
-
-
-    io_write(io, (uint8_t *)"\015\012", 2); // CRLF
-    io_write(io, (uint8_t *)"\015\012", 2); // CRLF
-    io_write(io, (uint8_t *)"\015\012", 2); // CRLF
+// spacing vertically between lines:
+    io_write(io, (uint8_t *)"sam\015\012", 5); // CRLF
 
 
  // Serial.print(buffer);
 
-    io_write(io, (uint8_t *)buffer, 1); // compiles cleanly
+ //   io_write(io, (uint8_t *)buffer, 1); // compiles cleanly
 
  // Serial.print("   ");
 
