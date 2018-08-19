@@ -59,6 +59,26 @@ int main(void)
     SystemInit();
     pins_setup(); // initialize GPIO D13 PA17
 
+    // PA14  PA27  PA28  PA30
+    // PB14  PB22
+
+    // PA14 (board D2) Metro M0 Express, only // ainsuforth wa1tnr TODO
+
+    // configure PA14 (board D2) as GCLK_IO[0] output of main clock generator,
+    // to confirm 48 MHz operation
+    // set pin as output
+
+    PORT->Group[PORTA].DIRSET.reg  = (uint32_t)(1 << 14); // PA14 //  1  2 pinmode   //  D2
+
+    // enable the peripheral mux for this pin
+    PORT->Group[PORTA].PINCFG[14].bit.PMUXEN = 1;
+
+    PORT->Group[PORTA].PMUX[(14>>1)].bit.PMUXE
+        = MUX_PA14H_GCLK_IO0; // select the GCLK_IO0 peripheral function
+
+    // do this in ./config/hpl_gclk_config.h:
+    // GCLK->GENCTRL[0].bit.OE = 1; // enable output from clock generator 0
+
     // blink_awhile(); // is the clock running?
 
     USART_0_example();
