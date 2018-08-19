@@ -1,54 +1,81 @@
 #include <atmel_start.h>
 #include "driver_examples.h"
 #include "pins.h"
+#include "src/dump.h"
 
-#define WASTED_TIME 21040
-
-void waste(void) { // time and resources
-    for (volatile int i=(8 * WASTED_TIME); i>0; i--) {
+void delays(void) { // delay some
+    for (volatile int i=1299999; i>0; i--) {
+        // empty loop
     }
 }
 
-void blink(void) {
-    PORT->Group[PORTA].OUTTGL.reg  = (uint32_t)(1 << 17); // PA17 //    13 pintoggle // D13
-    waste();
-    PORT->Group[PORTA].OUTTGL.reg  = (uint32_t)(1 << 17);
-    waste(); waste();
-}
-
-void shortpinwaste(void) { // short LED flasher
-        for (int index = 8; index > 0; index--) blink();
-}
-
-void pinwaste(void) {
-    for (int ji = 3; ji > 0; ji--) {
-        for (int index = 8; index > 0; index--) blink();
-        waste(); waste(); waste(); waste();
-        waste(); waste(); waste(); waste();
-        for (int index = 8; index > 0; index--) blink();
-        waste(); waste(); waste(); waste();
-        waste(); waste(); waste(); waste();
+void blink_two(void) {
+    // clear first
+    PORT->Group[PORTA].OUTCLR.reg  = (uint32_t)(1 << 17); // PA17 //  0 13 pinwrite  // D13
+    for (int blinks=2; blinks >0; blinks--) {
+        PORT->Group[PORTA].OUTTGL.reg  = (uint32_t)(1 << 17); // PA17 //    13 pintoggle // D13
+        delays();
     }
 }
 
-int main(void) {
+
+void ldelays(void) {
+    for (int ie=7; ie >0; ie--) {
+        delays();
+    }
+}
+
+void blink_awhile(void) {
+
+    for (int iter=5; iter >0; iter--) {
+        blink_two();
+    }
+
+/*
+    ldelays();
+
+    for (int iter=3 ; iter >0; iter--) {
+        blink_two();
+    }
+
+    ldelays();
+
+    for (int iter=3 ; iter >0; iter--) {
+        blink_two();
+    }
+
+    ldelays();
+*/
+
+}
+
+int main(void)
+{
+    uint8_t* rram = 0;
+    int q = 0;
     /* Initializes MCU, drivers and middleware */
-    atmel_start_init(); // calls system_init() from driver_init.c
+    atmel_start_init();
     SystemInit();
-    // init_mcu();
+    pins_setup(); // initialize GPIO D13 PA17
 
-    pins_setup();
+    // blink_awhile(); // is the clock running?
 
     USART_0_example();
 
-    // pinwaste(); // LED flasher
-    // shortpinwaste();
+    // rram = srdump();
 
-    // turn on LED once and for all -- cannot attend to it further:
-    PORT->Group[PORTA].OUTSET.reg |= (uint32_t)(1 << 17); // PA17 //  1 13 pinwrite  // D13 
+    rram = cdump();
 
-    // toggle D11 forever:
+    q = (int)rram;
+    if (q > 2)  q = 2;
+    if (q < 1)  q = 2;
+    for (volatile int i=-1; i<q; i++) {
+        blink_two();
+        // ldelays();
+    }
+    /* Replace with your application code */
+
     while (1) {
-        toggle_d11(); // 766 ns / 1.3 MHz
+        toggle_d11();
     }
 }
