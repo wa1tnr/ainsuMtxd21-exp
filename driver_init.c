@@ -36,37 +36,41 @@ void USART_0_init(void)
 	USART_0_PORT_init();
 }
 
-void system_init(void)
-{
-	init_mcu();
+void atmel_usart_init(void) {
+    USART_0_init();
+}
 
-	// GPIO on PA16
+void atmel_mcu_init(void) {
+    init_mcu();
+}
 
-	// Set pin direction to output
-	gpio_set_pin_direction(PA16, GPIO_DIRECTION_OUT);
+void atmel_pins_init(void) {
+    // init_mcu(); // first behavior of atmel_start_init()
+    // GPIO on PA16
+    // Set pin direction to output
+    gpio_set_pin_direction(PA16, GPIO_DIRECTION_OUT);
+    gpio_set_pin_level(PA16,
+        // <y> Initial level
+        // <id> pad_initial_level
+        // <false"> Low
+        // <true"> High
+        false);
+    gpio_set_pin_function(PA16, GPIO_PIN_FUNCTION_OFF);
+    // GPIO on PA17
+    // Set pin direction to output
+    gpio_set_pin_direction(PA17, GPIO_DIRECTION_OUT);
+    gpio_set_pin_level(PA17,
+        // <y> Initial level
+        // <id> pad_initial_level
+        // <false"> Low
+        // <true"> High
+        false);
+    gpio_set_pin_function(PA17, GPIO_PIN_FUNCTION_OFF);
+    // USART_0_init();
+}
 
-	gpio_set_pin_level(PA16,
-	                   // <y> Initial level
-	                   // <id> pad_initial_level
-	                   // <false"> Low
-	                   // <true"> High
-	                   false);
-
-	gpio_set_pin_function(PA16, GPIO_PIN_FUNCTION_OFF);
-
-	// GPIO on PA17
-
-	// Set pin direction to output
-	gpio_set_pin_direction(PA17, GPIO_DIRECTION_OUT);
-
-	gpio_set_pin_level(PA17,
-	                   // <y> Initial level
-	                   // <id> pad_initial_level
-	                   // <false"> Low
-	                   // <true"> High
-	                   false);
-
-	gpio_set_pin_function(PA17, GPIO_PIN_FUNCTION_OFF);
-
-	USART_0_init();
+void system_init(void) {
+    atmel_mcu_init();
+    atmel_pins_init();
+    atmel_usart_init();
 }
