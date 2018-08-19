@@ -65,6 +65,15 @@ int main(void)
     // rram = srdump();
 
     rram = cdump();
+    rram = cdump();
+    rram = cdump();
+    rram = cdump();
+    rram = cdump();
+    rram = cdump();
+    rram = cdump();
+    rram = cdump();
+
+
 
     q = (int)rram;
     if (q > 2)  q = 2;
