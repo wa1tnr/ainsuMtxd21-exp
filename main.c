@@ -4,7 +4,7 @@
 #include "src/dump.h"
 
 void delays(void) { // delay some
-    for (volatile int i=1299999; i>0; i--) {
+    for (volatile int i=(3*21040); i>0; i--) {
         // empty loop
     }
 }
@@ -51,6 +51,7 @@ void blink_awhile(void) {
 
 int main(void)
 {
+    // rram, q, i
     uint8_t* rram = 0;
     int q = 0;
     /* Initializes MCU, drivers and middleware */
@@ -64,27 +65,9 @@ int main(void)
 
     // rram = srdump();
 
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-    rram = cdump();
-
-
+    for (int jk = 19; jk > 0; jk--) {
+        rram = cdump();
+    }
 
     q = (int)rram;
     if (q > 2)  q = 2;
