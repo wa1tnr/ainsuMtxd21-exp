@@ -12,7 +12,7 @@ void say_something(void) { }
 
 // #define LBOUND 0x2070
 // #define LBOUND 0x2010
-#define LBOUND 0x1500
+#define LBOUND 0x1d00
 #define UBOUND  0x1420
 
 /* dump 16 bytes of RAM in hex with ascii on the side */
@@ -168,7 +168,7 @@ uint8_t* cdump(void) {
  //   strcpy(buffer, (char *) p);
 
 // spacing vertically between lines:
-    io_write(io, (uint8_t *)"sam\015\012", 5); // CRLF
+    io_write(io, (uint8_t *)"\015\012", 2); // CRLF
 
 
  // Serial.print(buffer);
@@ -177,7 +177,7 @@ uint8_t* cdump(void) {
 
  // Serial.print("   ");
 
-    io_write(io, (uint8_t *)"--", 2);
+    io_write(io, (uint8_t *)"  ", 2);
 
     for (int i = 0; i < 16; i++) {
         char c = *ram++;
@@ -201,7 +201,7 @@ uint8_t* cdump(void) {
     }
     ram = (char*)p;
  // Serial.print("   ");
-    io_write(io, (uint8_t *)"__", 2);
+    io_write(io, (uint8_t *)"  ", 2);
     for (int i = 0; i < 16; i++) {
         buffer[0] = *ram++;
         if (buffer[0] > 0x7f || buffer[0] < ' ') buffer[0] = '.'; // the dot for unprintable chars
