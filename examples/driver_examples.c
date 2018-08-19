@@ -114,9 +114,9 @@ void USART_0_example(void) {
     usart_sync_get_desc();
     usart_sync_enbl();
     _cr();
-// }
+}
 
-// #ifdef NOT_DEFFINI
+#ifdef NOT_DEFFINI
 // void trapped(void) {
 
     io_write(io, (uint8_t *)
@@ -161,4 +161,4 @@ void USART_0_example(void) {
     }
 //  }
 }
-// #endif // #ifdef NOT_DEFFINI
+#endif // #ifdef NOT_DEFFINI
