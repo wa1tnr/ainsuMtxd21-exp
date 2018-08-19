@@ -57,10 +57,23 @@ int main(void)
     /* Initializes MCU, drivers and middleware */
     atmel_start_init();
     SystemInit();
+    // 8 MHz CPU
     pins_setup(); // initialize GPIO D13 PA17
+
+    // Summary: 8 MHz seen on D2 Metro M0 Express.  This is the only
+    // pin found that will perform this function, on any of these:
+
+    // Gemma M0  Trinket M0  Feather M0 Express Metro M0 Express
+
+    // Unchecked were ItsyBitsyM0 Adalogger M0 Feather M0 Basic.
+
+    // Possible pins for SAMD21, for this experiment, are:
 
     // PA14  PA27  PA28  PA30
     // PB14  PB22
+
+    // Pin D4 (which is also PA14) on SAMD51 (Feather M4 Express)
+    // is known to work, also.
 
     // PA14 (board D2) Metro M0 Express, only // ainsuforth wa1tnr TODO
 
