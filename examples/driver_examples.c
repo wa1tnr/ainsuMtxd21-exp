@@ -122,7 +122,7 @@ void USART_0_example(void) {
     io_write(io, (uint8_t *)
         "Program is configured for 38400 bps speed.\r\n\r\n",        46);
     io_write(io, (uint8_t *)
-        "Target MCU board is Adafruit Feather M4 Express.\r\n\r\n",  52);
+        "Target MCU board is Adafruit Feather M0 Express.\r\n\r\n",  52);
 
     color_reset();
     io_write(io, (uint8_t *)
