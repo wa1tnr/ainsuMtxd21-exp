@@ -30,23 +30,6 @@ void blink_awhile(void) {
     for (int iter=5; iter >0; iter--) {
         blink_two();
     }
-
-/*
-    ldelays();
-
-    for (int iter=3 ; iter >0; iter--) {
-        blink_two();
-    }
-
-    ldelays();
-
-    for (int iter=3 ; iter >0; iter--) {
-        blink_two();
-    }
-
-    ldelays();
-*/
-
 }
 
 int main(void)
@@ -81,6 +64,8 @@ int main(void)
     // to confirm 48 MHz operation
     // set pin as output
 
+    // cannot do this on other target boards; needs Metro M0 Express:
+#ifdef METRO_M0_EXPRESS
     PORT->Group[PORTA].DIRSET.reg  = (uint32_t)(1 << 14); // PA14 //  1  2 pinmode   //  D2
 
     // enable the peripheral mux for this pin
@@ -91,6 +76,7 @@ int main(void)
 
     // do this in ./config/hpl_gclk_config.h:
     // GCLK->GENCTRL[0].bit.OE = 1; // enable output from clock generator 0
+#endif // #ifdef METRO_M0_EXPRESS
 
     // blink_awhile(); // is the clock running?
 
