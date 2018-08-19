@@ -1,0 +1,27 @@
+Sun Aug 19 00:07:29 UTC 2018
+
+On branch Hello_World_Conversations
+
+The program prompts and responds - a very simple
+interpreter that mostly echoes what you typed.
+
+It understands one command, called 'warm' (as in
+warm boot).
+
+Pressing ENTER after typing 'warm' will cause the
+program to warm reboot itself.
+
+You'll know if it's about to work or not as there
+is special typography to indicate that:
+
+   warm  !warm!
+
+The program is also a data dumper, but not a very
+good one at this point.  Still trying to assess
+where the program was at, on SAMD51.
+
+This, however, should be a pretty good replica,
+though the SAMD51 version probably has a much
+faster system clock.
+
+
