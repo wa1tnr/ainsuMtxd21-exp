@@ -1,0 +1,1 @@
+https://www.avrfreaks.net/forum/resolved-samd51-asf4start-clock-fail-debugger-hang
