@@ -12,7 +12,7 @@ void say_something(void) { }
 
 // #define LBOUND 0x2070
 // #define LBOUND 0x2010
-#define LBOUND 0x1280
+#define LBOUND 0x1500
 #define UBOUND  0x1420
 
 /* dump 16 bytes of RAM in hex with ascii on the side */
@@ -109,6 +109,7 @@ uint8_t* parsed_low(void) { // parse it out
 
     // spacing kludge, temporary:
     // io_write(io, (uint8_t *)"\040", 1); // SPACE ASCII 32 0x20
+    io_write(io, (uint8_t *)"\040", 1); // SPACE ASCII 32 0x20
     // pp thing went here
 
     return (uint8_t *) rbyte;
@@ -131,16 +132,16 @@ uint8_t* parsed_hi(void) { // parse it out
 
     // if (rbyte == 0) return (uint8_t *) rbyte; // good
 
-    if (rbyte == 0) io_write(io, (uint8_t *)"\060", 1); // '0'
-    if (rbyte == 1) io_write(io, (uint8_t *)"\061", 1); // '1'
-    if (rbyte == 2) io_write(io, (uint8_t *)"\062", 1); // '2'
-    if (rbyte == 3) io_write(io, (uint8_t *)"\063", 1); // '3'
-    if (rbyte == 4) io_write(io, (uint8_t *)"\064", 1); // '4'
-    if (rbyte == 5) io_write(io, (uint8_t *)"\065", 1); // '5'
-    if (rbyte == 6) io_write(io, (uint8_t *)"\066", 1); // '0'
-    if (rbyte == 7) io_write(io, (uint8_t *)"\067", 1); // '0'
-    if (rbyte == 8) io_write(io, (uint8_t *)"\068", 1); // '0'
-    if (rbyte == 9) io_write(io, (uint8_t *)"\069", 1); // '0'
+    if (rbyte == 0) io_write(io, (uint8_t *)"0", 1); // '0'
+    if (rbyte == 1) io_write(io, (uint8_t *)"1", 1); // '1'
+    if (rbyte == 2) io_write(io, (uint8_t *)"2", 1); // '2'
+    if (rbyte == 3) io_write(io, (uint8_t *)"3", 1); // '3'
+    if (rbyte == 4) io_write(io, (uint8_t *)"4", 1); // '4'
+    if (rbyte == 5) io_write(io, (uint8_t *)"5", 1); // '5'
+    if (rbyte == 6) io_write(io, (uint8_t *)"6", 1); // '0'
+    if (rbyte == 7) io_write(io, (uint8_t *)"7", 1); // '0'
+    if (rbyte == 8) io_write(io, (uint8_t *)"8", 1); // '0'
+    if (rbyte == 9) io_write(io, (uint8_t *)"9", 1); // '0'
     if (rbyte == 0xa) io_write(io, (uint8_t *)"A", 1); // 'A'
     if (rbyte == 0xb) io_write(io, (uint8_t *)"B", 1); // 'B'
     if (rbyte == 0xc) io_write(io, (uint8_t *)"C", 1); // 'C'
@@ -149,7 +150,6 @@ uint8_t* parsed_hi(void) { // parse it out
     if (rbyte == 0xf) io_write(io, (uint8_t *)"F", 1); // 'F'
 
     // spacing kludge, temporary:
-    io_write(io, (uint8_t *)"\040", 1); // SPACE ASCII 32 0x20
     // pp thing went here
     return (uint8_t *) rbyte;
 }
