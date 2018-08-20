@@ -89,7 +89,7 @@ int COUNTER_N = 0;
 
 uint8_t* ndump(void) { // nybble dump
 
-    int test_byte = 0xfb; // sample int to place into ram
+    int test_byte = 0xdf; // sample int to place into ram
 
     char buffer[5] = "";
     char *ram;
@@ -102,12 +102,12 @@ uint8_t* ndump(void) { // nybble dump
     for (int i = 0; i < 16; i++) {
         char c = *ram++;
         byte_r = (uint8_t) c; // global
-        // parsed_hi(); // print upper nybble out serial port
-        // parsed_low(); // print lower nybble out serial port
+        parsed_hi_n(); // print upper nybble out serial port
+        parsed_low_n(); // print lower nybble out serial port
     } // for
 
-    // ram = (char*)p;
-    // io_write(io, (uint8_t *)"  ", 2);
+    ram = (char*) &test_byte;
+    io_write(io, (uint8_t *)"  ", 2);
     for (int i = 0; i < 16; i++) {
         buffer[0] = *ram++;
         if (buffer[0] > 0x7f || buffer[0] < ' ') buffer[0] = '.'; // the dot for unprintable chars
@@ -115,14 +115,9 @@ uint8_t* ndump(void) { // nybble dump
 
      // print the ascii translation chars on the right margin, one
      // at a time:
-        // io_write(io, (uint8_t *)buffer, 1); // compiles cleanly
+        io_write(io, (uint8_t *)buffer, 1);
     }
     // forth: push(p + 16);
-    // COUNTER = COUNTER + 16;
-    // return (uint8_t *)p;
-    return (uint8_t *)dummy_val;
+    COUNTER_N = COUNTER_N + 16;
+    return (uint8_t *)test_byte;
 }
-
-/*
-
-*/
