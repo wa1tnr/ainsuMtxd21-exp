@@ -85,33 +85,26 @@ uint8_t* parsed_hi_n(void) {
     return (uint8_t *) rbyte_n;
 }
 
-int COUNTER = 0;
+int COUNTER_N = 0;
 
-/* dump 16 bytes of RAM in hex with ascii on the side */
+uint8_t* ndump(void) { // nybble dump
 
-/* */
+    int test_byte = 0xfb; // sample int to place into ram
 
-uint8_t* ndump(void) { // nybble dump - dummy function
     char buffer[5] = "";
     char *ram;
-    int p = 1; // dummy value
-    // int p = LBOUND+COUNTER ;
-    ram = (char*)p;
 
-    // io_write(io, (uint8_t *)"\015\012", 2); // CRLF
-    // io_write(io, (uint8_t *)"  ", 2);
+    ram = (char*) &test_byte;
 
+    io_write(io, (uint8_t *)"\015\012", 2); // CRLF
+    io_write(io, (uint8_t *)"  ", 2);
 
     for (int i = 0; i < 16; i++) {
         char c = *ram++;
-
         byte_r = (uint8_t) c; // global
-
         // parsed_hi(); // print upper nybble out serial port
-
         // parsed_low(); // print lower nybble out serial port
     } // for
-
 
     // ram = (char*)p;
     // io_write(io, (uint8_t *)"  ", 2);
