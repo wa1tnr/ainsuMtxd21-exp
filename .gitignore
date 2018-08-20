@@ -6,3 +6,4 @@ a*.zip
 a*.atzip
 gcc/
 all_mod*
+cruft/

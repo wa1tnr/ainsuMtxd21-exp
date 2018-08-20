@@ -89,7 +89,23 @@ int COUNTER_N = 0;
 
 uint8_t* ndump(void) { // nybble dump
 
-    int test_byte = 0xdf; // sample int to place into ram
+    //   int test_byte = 0xdf;
+    uint32_t test_byte = 0xc0ffeeca; // sample int to place into ram
+
+/*
+ *  sample run
+ *
+ *  uint32_t test_byte = 0xc0ffeeca; // sample int to place into ram
+ *
+ *  DD EE FF C0 00 00 00 00 00 21 00 00 2A 00 00 00   .........!..*...
+ *
+ *  old code:
+ *  int test_byte = 0xdf; // sample int to place into ram
+ *
+ *  No program changes were required going from
+ *          'int test_byte = 1'
+ *  to 'uint32_t test_byte = 0xc0ffeeca'.
+*/
 
     char buffer[5] = "";
     char *ram;
