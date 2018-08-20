@@ -1,6 +1,10 @@
-Mon Aug 20 20:51:13 UTC 2018
+Mon Aug 20 21:32:22 UTC 2018
 
-On branch Hello_Data_Dumper_factored_cc-
+New branch instance:
+
+    On branch Hello_Data_Dumper_factored_dd-
+
+(see .._factored_cc- as well)
 
 This program dumps a 32-bit integer, held in RAM,
 to the UART (to the controlling serial terminal
