@@ -114,6 +114,9 @@ void USART_0_example(void) {
     usart_sync_get_desc();
     usart_sync_enbl();
     _cr();
+    io_write(io, (uint8_t *) "USART_0_example() .. completes.\r\n", 33); // is alive
+                           // 123456789012345678901234567890123456789012345
+                           //         10        20        30
 }
 
 #ifdef NOT_DEFFINI
