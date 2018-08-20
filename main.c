@@ -104,6 +104,10 @@ int main(void)
 
     /* Replace with your application code */
 
+    rram = ndump(); // nyb_stack.c
+
+    _cr(); // examples/driver_examples.c
+
     while (1) {
         toggle_d11();
     }
