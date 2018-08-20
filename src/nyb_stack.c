@@ -20,7 +20,21 @@ int rbyte_n = 0;
 
 char byte_r;
 
-void ascii_emit_n(void) { // preload rbyte with a value 0-15 decimal
+/* dig this:
+ *
+ * Rather than become reinventive, reused code was
+ * differentiated by (simply) appending '_n' to the
+ * names of functions (and variables!)
+ *
+ * The intent, here, is to keep things simple, early
+ * on (this isn't the time to think about other,
+ * legitimate concerns, that compete with those concerns
+ * that are more immediate).
+ *
+ * Factoring, later on, seems likely. ;)
+ */
+
+void ascii_emit_n(void) { // preload rbyte_n with a value 0-15 decimal
     if (rbyte_n ==   0) io_write(io, (uint8_t *)"0", 1);
     if (rbyte_n ==   1) io_write(io, (uint8_t *)"1", 1);
     if (rbyte_n ==   2) io_write(io, (uint8_t *)"2", 1);
@@ -48,14 +62,14 @@ void ascii_emit_n(void) { // preload rbyte with a value 0-15 decimal
   00000010  38 20 39 20 41 20 42 20  43 20 44 20 45 20 46 0a  |8 9 A B C D E F.|
 */
 
-/*
-uint8_t* parsed_low(void) {
+
+uint8_t* parsed_low_n(void) {
     char byte_s = byte_r;
-    rbyte = byte_s; // rbyte is a working copy;
-    rbyte = byte_s & 0x0f; // mask upper nybble - two ampersands gives a boolean
-    ascii_emit();
-    // io_write(io, (uint8_t *)"\040", 1); // SPACE ASCII 32 0x20
-    return (uint8_t *) rbyte;
+    rbyte_n = byte_s; // rbyte_n is a working copy;
+    rbyte_n = byte_s & 0x0f; // mask upper nybble - two ampersands gives a boolean
+    ascii_emit_n();
+    io_write(io, (uint8_t *)"\040", 1); // SPACE ASCII 32 0x20
+    return (uint8_t *) rbyte_n;
 }
 
 uint8_t* parsed_hi(void) {
@@ -68,7 +82,6 @@ uint8_t* parsed_hi(void) {
 }
 
 int COUNTER = 0;
-*/
 
 /* dump 16 bytes of RAM in hex with ascii on the side */
 
