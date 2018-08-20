@@ -38,6 +38,7 @@ int main(void)
     // rram, q, i
     uint8_t* rram = 0;
     int q = 0;
+    int xec = 0; // false - do not exec
     /* Initializes MCU, drivers and middleware */
     atmel_start_init();
     SystemInit();
@@ -85,17 +86,22 @@ int main(void)
 
     // rram = srdump();
 
-    for (int jk = 19; jk > 0; jk--) {
-        rram = cdump();
-    }
+    // iterate the cdump over 19 lines of 16 bytes each:
+    if (xec != 0) {
+        for (int jk = 19; jk > 0; jk--) {
+            rram = cdump();
+        }
 
-    q = (int)rram;
-    if (q > 2)  q = 2;
-    if (q < 1)  q = 2;
-    for (volatile int i=-1; i<q; i++) {
-        blink_two();
-        // ldelays();
-    }
+        q = (int)rram;
+        if (q > 2)  q = 2;
+        if (q < 1)  q = 2;
+        for (volatile int i=-1; i<q; i++) {
+            blink_two();
+            // ldelays();
+        }
+
+    } // fi xec
+
     /* Replace with your application code */
 
     while (1) {
