@@ -15,15 +15,8 @@
 #include "common.h"
 #include <string.h>
 
-// lower boundary of the memory to examine
-#define LBOUND 0x1d10+0x10
-#define UBOUND  0x1420
-
 int nyb_stack = 0;
-int dummy_val = 0;
-/*
-int rbyte = 0;
-*/
+int rbyte_n = 0;
 
 char byte_r;
 
