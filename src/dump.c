@@ -37,7 +37,6 @@ void ascii_emit(void) { // preload rbyte with a value 0-15 decimal
   $ echo "0 1 2 3 4 5 6 7 8 9 A B C D E F" | hexdump -C
   00000000  30 20 31 20 32 20 33 20  34 20 35 20 36 20 37 20  |0 1 2 3 4 5 6 7 |
   00000010  38 20 39 20 41 20 42 20  43 20 44 20 45 20 46 0a  |8 9 A B C D E F.|
-
 */
 
 uint8_t* parsed_low(void) {
@@ -49,11 +48,10 @@ uint8_t* parsed_low(void) {
     return (uint8_t *) rbyte;
 }
 
-uint8_t* parsed_hi(void) { // parse it out
-    int rbyte = 0;
+uint8_t* parsed_hi(void) {
     char byte_s = byte_r;
-    rbyte = byte_s; // rbyte is a working copy;
-    rbyte = byte_s & 0xf0; // mask lower nybble
+    rbyte = byte_s;
+    rbyte = byte_s & 0xf0; // lower nybble masked
     rbyte = rbyte >> 4;
     ascii_emit();
     return (uint8_t *) rbyte;
@@ -71,6 +69,7 @@ uint8_t* cdump(void) {
     io_write(io, (uint8_t *)"\015\012", 2); // CRLF
     io_write(io, (uint8_t *)"  ", 2);
 
+
     for (int i = 0; i < 16; i++) {
         char c = *ram++;
 
@@ -80,6 +79,8 @@ uint8_t* cdump(void) {
 
         parsed_low(); // print lower nybble out serial port
     } // for
+
+
     ram = (char*)p;
     io_write(io, (uint8_t *)"  ", 2);
     for (int i = 0; i < 16; i++) {
