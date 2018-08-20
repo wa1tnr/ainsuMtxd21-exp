@@ -3,6 +3,14 @@
 /* wa1tnr, Connecticut USA */
 /* LICENSE: LGPL v2.1 */
 
+/*
+ *  program:  load a value into an int (test_byte),
+ *
+ *            then dump the ram that holds that value,
+ *            to examine how that value was represented
+ *            in system memory.
+ */
+
 #include "driver_examples.h"
 #include "common.h"
 #include <string.h>
