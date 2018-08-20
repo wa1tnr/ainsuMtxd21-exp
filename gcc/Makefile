@@ -68,6 +68,7 @@ hal/src/hal_sleep.o \
 atmel_start.o \
 hal/src/hal_atomic.o \
 src/dump.o \
+src/nyb_stack.o \
 pins.o \
 main.o
 
@@ -97,6 +98,7 @@ OBJS_AS_ARGS +=  \
 "atmel_start.o" \
 "hal/src/hal_atomic.o" \
 "src/dump.o" \
+"src/nyb_stack.o" \
 "pins.o" \
 "main.o"
 
@@ -129,6 +131,7 @@ DEPS_AS_ARGS +=  \
 "hpl/pm/hpl_pm.d" \
 "atmel_start.d" \
 "src/dump.d" \
+"src/nyb_stack.d" \
 "pins.d" \
 "main.d"
 
