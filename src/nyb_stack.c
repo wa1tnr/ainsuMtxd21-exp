@@ -11,6 +11,10 @@
  *            in system memory.
  */
 
+/* question: does &++ make sense at all?              */
+/*                                                    */
+/* intent:  add '1' to the contents of a variable     */
+
 #include "driver_examples.h"
 #include "common.h"
 #include <string.h>
@@ -72,13 +76,13 @@ uint8_t* parsed_low_n(void) {
     return (uint8_t *) rbyte_n;
 }
 
-uint8_t* parsed_hi(void) {
+uint8_t* parsed_hi_n(void) {
     char byte_s = byte_r;
-    rbyte = byte_s;
-    rbyte = byte_s & 0xf0; // lower nybble masked
-    rbyte = rbyte >> 4;
-    ascii_emit();
-    return (uint8_t *) rbyte;
+    rbyte_n = byte_s;
+    rbyte_n = byte_s & 0xf0; // lower nybble masked
+    rbyte_n = rbyte_n >> 4;
+    ascii_emit_n();
+    return (uint8_t *) rbyte_n;
 }
 
 int COUNTER = 0;
