@@ -1,0 +1,15 @@
+Mon Aug 20 20:51:13 UTC 2018
+
+On branch Hello_Data_Dumper_factored_cc-
+
+This program dumps a 32-bit integer, held in RAM,
+to the UART (to the controlling serial terminal
+attached to TX/RX pair at PA10/PA11).
+
+It's dumped in context, for 16 bytes beginning
+with the &variable.
+
+Addresses not yet available to this interface. ;)
+
+Serial port speed is 38400 bps.
+
