@@ -83,7 +83,9 @@ int main(void)
 
     // blink_awhile(); // is the clock running?
 
-    USART_0_example();
+    // old location for this important function call:
+    // USART_0_example();
+    USART_0_example_upper(); // initialize
 
     // rram = srdump();
 
@@ -109,6 +111,9 @@ int main(void)
     // rram = cdump();    // dump.c
 
     _cr(); // examples/driver_examples.c
+
+    // New location for the demo:
+    USART_0_example_lower();
 
     while (1) {
         toggle_d11();
