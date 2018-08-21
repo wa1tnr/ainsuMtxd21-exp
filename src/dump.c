@@ -70,6 +70,46 @@ uint8_t* cdump(void) {
     io_write(io, (uint8_t *)"\015\012", 2); // CRLF
     io_write(io, (uint8_t *)"  ", 2);
 
+    // address printing
+
+
+    uint32_t adrs  = (uint32_t) ram;
+
+    io_write(io, (uint8_t *)"$", 1);
+
+    /* stanza */
+    uint32_t digit = adrs & 0xff000000; // MSB - uppermost byte
+    digit = digit >> 24;
+    byte_r = (uint8_t) digit;
+    parsed_hi();
+    parsed_low();
+
+    /* stanza */
+    // uint32_t
+    digit = adrs & 0x00ff0000;
+    digit = digit >> 16;
+    byte_r = (uint8_t) digit;
+    parsed_hi();
+    parsed_low();
+
+    /* stanza */
+    digit = adrs & 0x0000ff00;
+    digit = digit >>  8;
+    byte_r = (uint8_t) digit;
+    parsed_hi();
+    parsed_low();
+
+    /* stanza */
+    digit = adrs & 0x000000ff;
+ // digit = digit >>  8;
+    byte_r = (uint8_t) digit;
+    parsed_hi();
+    parsed_low();
+
+    io_write(io, (uint8_t *)":: ", 3);
+
+    byte_r = 0; // clear it for next subprogram's reuse
+
     for (int i = 0; i < 16; i++) {
         char c = *ram++;
 
@@ -83,6 +123,8 @@ uint8_t* cdump(void) {
     } // for
 
     ram = (char*)p;
+
+
     io_write(io, (uint8_t *)"  ", 2);
 
     /* FEATURE
