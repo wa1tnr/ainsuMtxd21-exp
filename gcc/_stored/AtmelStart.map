@@ -111,8 +111,12 @@ Allocating common symbols
 Common symbol       size              file
 
 errno               0x4               /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-reent.o)
+byte_r              0x1               src/dump.o
+tib                 0x10              examples/driver_examples.o
+io                  0x4               examples/driver_examples.o
 _irq_table          0x70              hpl/core/hpl_core_m0plus_base.o
 USART_0             0xc               driver_init.o
+buf                 0x4               examples/driver_examples.o
 
 Discarded input sections
 
@@ -229,7 +233,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 hal/src/hal_io.o
  .text.io_get_version
                 0x0000000000000000        0x4 hal/src/hal_io.o
- .text.io_read  0x0000000000000000       0x30 hal/src/hal_io.o
  .group         0x0000000000000000        0xc samd21a/gcc/gcc/startup_samd21.o
  .group         0x0000000000000000        0xc samd21a/gcc/gcc/startup_samd21.o
  .group         0x0000000000000000        0xc samd21a/gcc/gcc/startup_samd21.o
@@ -3052,6 +3055,7 @@ Discarded input sections
  .text          0x0000000000000000        0x0 examples/driver_examples.o
  .data          0x0000000000000000        0x0 examples/driver_examples.o
  .bss           0x0000000000000000        0x0 examples/driver_examples.o
+ .text._bkbar   0x0000000000000000       0x1c examples/driver_examples.o
  .debug_macro   0x0000000000000000      0xa48 examples/driver_examples.o
  .debug_macro   0x0000000000000000      0x16d examples/driver_examples.o
  .debug_macro   0x0000000000000000       0x22 examples/driver_examples.o
@@ -3151,6 +3155,208 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x1c examples/driver_examples.o
  .debug_macro   0x0000000000000000       0x16 examples/driver_examples.o
  .debug_macro   0x0000000000000000       0xc9 examples/driver_examples.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .group         0x0000000000000000        0xc examples/warm.o
+ .text          0x0000000000000000        0x0 examples/warm.o
+ .data          0x0000000000000000        0x0 examples/warm.o
+ .debug_macro   0x0000000000000000      0xa48 examples/warm.o
+ .debug_macro   0x0000000000000000      0x16d examples/warm.o
+ .debug_macro   0x0000000000000000       0x22 examples/warm.o
+ .debug_macro   0x0000000000000000       0x8e examples/warm.o
+ .debug_macro   0x0000000000000000       0x51 examples/warm.o
+ .debug_macro   0x0000000000000000       0xef examples/warm.o
+ .debug_macro   0x0000000000000000       0x6a examples/warm.o
+ .debug_macro   0x0000000000000000      0x1df examples/warm.o
+ .debug_macro   0x0000000000000000       0x22 examples/warm.o
+ .debug_macro   0x0000000000000000       0x3f examples/warm.o
+ .debug_macro   0x0000000000000000       0x28 examples/warm.o
+ .debug_macro   0x0000000000000000       0x85 examples/warm.o
+ .debug_macro   0x0000000000000000      0x375 examples/warm.o
+ .debug_macro   0x0000000000000000      0x67e examples/warm.o
+ .debug_macro   0x0000000000000000      0x8b1 examples/warm.o
+ .debug_macro   0x0000000000000000      0x22e examples/warm.o
+ .debug_macro   0x0000000000000000      0xd5c examples/warm.o
+ .debug_macro   0x0000000000000000      0x4dc examples/warm.o
+ .debug_macro   0x0000000000000000      0x9f6 examples/warm.o
+ .debug_macro   0x0000000000000000      0x82b examples/warm.o
+ .debug_macro   0x0000000000000000      0x45f examples/warm.o
+ .debug_macro   0x0000000000000000       0x5e examples/warm.o
+ .debug_macro   0x0000000000000000      0x8f9 examples/warm.o
+ .debug_macro   0x0000000000000000      0x21c examples/warm.o
+ .debug_macro   0x0000000000000000      0x735 examples/warm.o
+ .debug_macro   0x0000000000000000       0x5e examples/warm.o
+ .debug_macro   0x0000000000000000      0x632 examples/warm.o
+ .debug_macro   0x0000000000000000      0x3ac examples/warm.o
+ .debug_macro   0x0000000000000000      0xc76 examples/warm.o
+ .debug_macro   0x0000000000000000     0x1092 examples/warm.o
+ .debug_macro   0x0000000000000000      0xc4a examples/warm.o
+ .debug_macro   0x0000000000000000      0x6ba examples/warm.o
+ .debug_macro   0x0000000000000000     0x1b3d examples/warm.o
+ .debug_macro   0x0000000000000000     0x143c examples/warm.o
+ .debug_macro   0x0000000000000000      0x340 examples/warm.o
+ .debug_macro   0x0000000000000000       0x7c examples/warm.o
+ .debug_macro   0x0000000000000000       0xa0 examples/warm.o
+ .debug_macro   0x0000000000000000       0x4c examples/warm.o
+ .debug_macro   0x0000000000000000       0xca examples/warm.o
+ .debug_macro   0x0000000000000000       0x94 examples/warm.o
+ .debug_macro   0x0000000000000000       0x58 examples/warm.o
+ .debug_macro   0x0000000000000000      0x341 examples/warm.o
+ .debug_macro   0x0000000000000000       0x82 examples/warm.o
+ .debug_macro   0x0000000000000000      0x189 examples/warm.o
+ .debug_macro   0x0000000000000000       0xb8 examples/warm.o
+ .debug_macro   0x0000000000000000       0xa0 examples/warm.o
+ .debug_macro   0x0000000000000000       0xb2 examples/warm.o
+ .debug_macro   0x0000000000000000       0x1c examples/warm.o
+ .debug_macro   0x0000000000000000       0x1c examples/warm.o
+ .debug_macro   0x0000000000000000       0x1c examples/warm.o
+ .debug_macro   0x0000000000000000       0x7c examples/warm.o
+ .debug_macro   0x0000000000000000      0x15a examples/warm.o
+ .debug_macro   0x0000000000000000       0x10 examples/warm.o
+ .debug_macro   0x0000000000000000       0xdc examples/warm.o
+ .debug_macro   0x0000000000000000      0x124 examples/warm.o
+ .debug_macro   0x0000000000000000      0x124 examples/warm.o
+ .debug_macro   0x0000000000000000      0x124 examples/warm.o
+ .debug_macro   0x0000000000000000      0x124 examples/warm.o
+ .debug_macro   0x0000000000000000      0x124 examples/warm.o
+ .debug_macro   0x0000000000000000      0x124 examples/warm.o
+ .debug_macro   0x0000000000000000      0x124 examples/warm.o
+ .debug_macro   0x0000000000000000       0xe2 examples/warm.o
+ .debug_macro   0x0000000000000000       0xe2 examples/warm.o
+ .debug_macro   0x0000000000000000       0xe2 examples/warm.o
+ .debug_macro   0x0000000000000000      0x12a examples/warm.o
+ .debug_macro   0x0000000000000000      0x100 examples/warm.o
+ .debug_macro   0x0000000000000000       0xf4 examples/warm.o
+ .debug_macro   0x0000000000000000      0x40f examples/warm.o
+ .debug_macro   0x0000000000000000       0x40 examples/warm.o
+ .debug_macro   0x0000000000000000      0x376 examples/warm.o
+ .debug_macro   0x0000000000000000     0x17df examples/warm.o
+ .debug_macro   0x0000000000000000       0x6d examples/warm.o
+ .debug_macro   0x0000000000000000       0x10 examples/warm.o
+ .debug_macro   0x0000000000000000       0x10 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0xca examples/warm.o
+ .debug_macro   0x0000000000000000       0x1c examples/warm.o
+ .debug_macro   0x0000000000000000       0x16 examples/warm.o
+ .debug_macro   0x0000000000000000       0x4c examples/warm.o
+ .debug_macro   0x0000000000000000       0xc9 examples/warm.o
  .group         0x0000000000000000        0xc driver_init.o
  .group         0x0000000000000000        0xc driver_init.o
  .group         0x0000000000000000        0xc driver_init.o
@@ -3255,6 +3461,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 driver_init.o
  .data          0x0000000000000000        0x0 driver_init.o
  .bss           0x0000000000000000        0x0 driver_init.o
+ .text.atmel_usart_init
+                0x0000000000000000        0xc driver_init.o
+ .text.atmel_mcu_init
+                0x0000000000000000        0xc driver_init.o
  .debug_macro   0x0000000000000000      0xa48 driver_init.o
  .debug_macro   0x0000000000000000      0x16d driver_init.o
  .debug_macro   0x0000000000000000       0x22 driver_init.o
@@ -4951,6 +5161,477 @@ Discarded input sections
  .debug_frame   0x0000000000000000       0x40 hal/src/hal_atomic.o
  .ARM.attributes
                 0x0000000000000000       0x32 hal/src/hal_atomic.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .group         0x0000000000000000        0xc src/dump.o
+ .text          0x0000000000000000        0x0 src/dump.o
+ .data          0x0000000000000000        0x0 src/dump.o
+ .debug_macro   0x0000000000000000      0xa48 src/dump.o
+ .debug_macro   0x0000000000000000      0x16d src/dump.o
+ .debug_macro   0x0000000000000000       0x22 src/dump.o
+ .debug_macro   0x0000000000000000       0x8e src/dump.o
+ .debug_macro   0x0000000000000000       0x51 src/dump.o
+ .debug_macro   0x0000000000000000       0xef src/dump.o
+ .debug_macro   0x0000000000000000       0x6a src/dump.o
+ .debug_macro   0x0000000000000000      0x1df src/dump.o
+ .debug_macro   0x0000000000000000       0x22 src/dump.o
+ .debug_macro   0x0000000000000000       0x3f src/dump.o
+ .debug_macro   0x0000000000000000       0x28 src/dump.o
+ .debug_macro   0x0000000000000000       0x85 src/dump.o
+ .debug_macro   0x0000000000000000      0x375 src/dump.o
+ .debug_macro   0x0000000000000000      0x67e src/dump.o
+ .debug_macro   0x0000000000000000      0x8b1 src/dump.o
+ .debug_macro   0x0000000000000000      0x22e src/dump.o
+ .debug_macro   0x0000000000000000      0xd5c src/dump.o
+ .debug_macro   0x0000000000000000      0x4dc src/dump.o
+ .debug_macro   0x0000000000000000      0x9f6 src/dump.o
+ .debug_macro   0x0000000000000000      0x82b src/dump.o
+ .debug_macro   0x0000000000000000      0x45f src/dump.o
+ .debug_macro   0x0000000000000000       0x5e src/dump.o
+ .debug_macro   0x0000000000000000      0x8f9 src/dump.o
+ .debug_macro   0x0000000000000000      0x21c src/dump.o
+ .debug_macro   0x0000000000000000      0x735 src/dump.o
+ .debug_macro   0x0000000000000000       0x5e src/dump.o
+ .debug_macro   0x0000000000000000      0x632 src/dump.o
+ .debug_macro   0x0000000000000000      0x3ac src/dump.o
+ .debug_macro   0x0000000000000000      0xc76 src/dump.o
+ .debug_macro   0x0000000000000000     0x1092 src/dump.o
+ .debug_macro   0x0000000000000000      0xc4a src/dump.o
+ .debug_macro   0x0000000000000000      0x6ba src/dump.o
+ .debug_macro   0x0000000000000000     0x1b3d src/dump.o
+ .debug_macro   0x0000000000000000     0x143c src/dump.o
+ .debug_macro   0x0000000000000000      0x340 src/dump.o
+ .debug_macro   0x0000000000000000       0x7c src/dump.o
+ .debug_macro   0x0000000000000000       0xa0 src/dump.o
+ .debug_macro   0x0000000000000000       0x4c src/dump.o
+ .debug_macro   0x0000000000000000       0xca src/dump.o
+ .debug_macro   0x0000000000000000       0x94 src/dump.o
+ .debug_macro   0x0000000000000000       0x58 src/dump.o
+ .debug_macro   0x0000000000000000      0x341 src/dump.o
+ .debug_macro   0x0000000000000000       0x82 src/dump.o
+ .debug_macro   0x0000000000000000      0x189 src/dump.o
+ .debug_macro   0x0000000000000000       0xb8 src/dump.o
+ .debug_macro   0x0000000000000000       0xa0 src/dump.o
+ .debug_macro   0x0000000000000000       0xb2 src/dump.o
+ .debug_macro   0x0000000000000000       0x1c src/dump.o
+ .debug_macro   0x0000000000000000       0x1c src/dump.o
+ .debug_macro   0x0000000000000000       0x1c src/dump.o
+ .debug_macro   0x0000000000000000       0x7c src/dump.o
+ .debug_macro   0x0000000000000000      0x15a src/dump.o
+ .debug_macro   0x0000000000000000       0x10 src/dump.o
+ .debug_macro   0x0000000000000000       0xdc src/dump.o
+ .debug_macro   0x0000000000000000      0x124 src/dump.o
+ .debug_macro   0x0000000000000000      0x124 src/dump.o
+ .debug_macro   0x0000000000000000      0x124 src/dump.o
+ .debug_macro   0x0000000000000000      0x124 src/dump.o
+ .debug_macro   0x0000000000000000      0x124 src/dump.o
+ .debug_macro   0x0000000000000000      0x124 src/dump.o
+ .debug_macro   0x0000000000000000      0x124 src/dump.o
+ .debug_macro   0x0000000000000000       0xe2 src/dump.o
+ .debug_macro   0x0000000000000000       0xe2 src/dump.o
+ .debug_macro   0x0000000000000000       0xe2 src/dump.o
+ .debug_macro   0x0000000000000000      0x12a src/dump.o
+ .debug_macro   0x0000000000000000      0x100 src/dump.o
+ .debug_macro   0x0000000000000000       0xf4 src/dump.o
+ .debug_macro   0x0000000000000000      0x40f src/dump.o
+ .debug_macro   0x0000000000000000       0x40 src/dump.o
+ .debug_macro   0x0000000000000000      0x376 src/dump.o
+ .debug_macro   0x0000000000000000     0x17df src/dump.o
+ .debug_macro   0x0000000000000000       0x6d src/dump.o
+ .debug_macro   0x0000000000000000       0x10 src/dump.o
+ .debug_macro   0x0000000000000000       0x10 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0xca src/dump.o
+ .debug_macro   0x0000000000000000       0x1c src/dump.o
+ .debug_macro   0x0000000000000000       0x16 src/dump.o
+ .debug_macro   0x0000000000000000       0x4c src/dump.o
+ .debug_macro   0x0000000000000000       0x5e src/dump.o
+ .debug_macro   0x0000000000000000       0x18 src/dump.o
+ .debug_macro   0x0000000000000000       0x35 src/dump.o
+ .debug_macro   0x0000000000000000       0x34 src/dump.o
+ .debug_macro   0x0000000000000000       0x58 src/dump.o
+ .debug_macro   0x0000000000000000       0x1f src/dump.o
+ .debug_macro   0x0000000000000000       0x43 src/dump.o
+ .debug_macro   0x0000000000000000       0x20 src/dump.o
+ .debug_macro   0x0000000000000000      0x18e src/dump.o
+ .debug_macro   0x0000000000000000      0x353 src/dump.o
+ .debug_macro   0x0000000000000000       0x10 src/dump.o
+ .debug_macro   0x0000000000000000       0x35 src/dump.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .group         0x0000000000000000        0xc src/nyb_stack.o
+ .text          0x0000000000000000        0x0 src/nyb_stack.o
+ .data          0x0000000000000000        0x0 src/nyb_stack.o
+ .bss           0x0000000000000000        0xc src/nyb_stack.o
+ .text.ascii_emit_n
+                0x0000000000000000      0x170 src/nyb_stack.o
+ .text.parsed_low_n
+                0x0000000000000000       0x3c src/nyb_stack.o
+ .text.parsed_hi_n
+                0x0000000000000000       0x20 src/nyb_stack.o
+ .text.ndump    0x0000000000000000       0xa8 src/nyb_stack.o
+ .rodata.str1.1
+                0x0000000000000000       0x28 src/nyb_stack.o
+ .debug_info    0x0000000000000000      0xd98 src/nyb_stack.o
+ .debug_abbrev  0x0000000000000000      0x272 src/nyb_stack.o
+ .debug_loc     0x0000000000000000      0x148 src/nyb_stack.o
+ .debug_aranges
+                0x0000000000000000       0x38 src/nyb_stack.o
+ .debug_ranges  0x0000000000000000       0x58 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x5aa src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0xa48 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x16d src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x22 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x8e src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x51 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xef src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x6a src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x1df src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x22 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x3f src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x28 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x85 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x375 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x67e src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x8b1 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x22e src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0xd5c src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x4dc src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x9f6 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x82b src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x45f src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x5e src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x8f9 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x21c src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x735 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x5e src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x632 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x3ac src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0xc76 src/nyb_stack.o
+ .debug_macro   0x0000000000000000     0x1092 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0xc4a src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x6ba src/nyb_stack.o
+ .debug_macro   0x0000000000000000     0x1b3d src/nyb_stack.o
+ .debug_macro   0x0000000000000000     0x143c src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x340 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x7c src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xa0 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x4c src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xca src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x94 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x58 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x341 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x82 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x189 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xb8 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xa0 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xb2 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x1c src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x1c src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x1c src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x7c src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x15a src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x10 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xdc src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x124 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x124 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x124 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x124 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x124 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x124 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x124 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xe2 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xe2 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xe2 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x12a src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x100 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xf4 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x40f src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x40 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x376 src/nyb_stack.o
+ .debug_macro   0x0000000000000000     0x17df src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x6d src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x10 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x10 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0xca src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x1c src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x16 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x4c src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x5e src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x18 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x35 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x34 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x58 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x1f src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x43 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x20 src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x18e src/nyb_stack.o
+ .debug_macro   0x0000000000000000      0x353 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x10 src/nyb_stack.o
+ .debug_macro   0x0000000000000000       0x35 src/nyb_stack.o
+ .debug_line    0x0000000000000000      0x9fd src/nyb_stack.o
+ .debug_str     0x0000000000000000    0x712cd src/nyb_stack.o
+ .comment       0x0000000000000000       0x80 src/nyb_stack.o
+ .debug_frame   0x0000000000000000       0x78 src/nyb_stack.o
+ .ARM.attributes
+                0x0000000000000000       0x32 src/nyb_stack.o
  .group         0x0000000000000000        0xc pins.o
  .group         0x0000000000000000        0xc pins.o
  .group         0x0000000000000000        0xc pins.o
@@ -5256,6 +5937,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 main.o
  .data          0x0000000000000000        0x0 main.o
  .bss           0x0000000000000000        0x0 main.o
+ .text.ldelays  0x0000000000000000       0x18 main.o
+ .text.blink_awhile
+                0x0000000000000000       0x14 main.o
  .debug_macro   0x0000000000000000      0xa48 main.o
  .debug_macro   0x0000000000000000      0x16d main.o
  .debug_macro   0x0000000000000000       0x22 main.o
@@ -5830,6 +6514,7 @@ LOAD hpl/gclk/hpl_gclk.o
 LOAD hal/src/hal_init.o
 LOAD samd21a/gcc/system_samd21.o
 LOAD examples/driver_examples.o
+LOAD examples/warm.o
 LOAD driver_init.o
 LOAD hpl/sercom/hpl_sercom.o
 LOAD hal/src/hal_gpio.o
@@ -5837,6 +6522,8 @@ LOAD hal/utils/src/utils_event.o
 LOAD hal/src/hal_sleep.o
 LOAD atmel_start.o
 LOAD hal/src/hal_atomic.o
+LOAD src/dump.o
+LOAD src/nyb_stack.o
 LOAD pins.o
 LOAD main.o
 START GROUP
@@ -5854,7 +6541,7 @@ LOAD /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtend.o
 LOAD /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
                 0x0000000000002000                STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:DEFINED (__stack_size__)?__stack_size__:0x2000
 
-.text           0x0000000000002000      0x7fc
+.text           0x0000000000002000      0xe70
                 0x0000000000002000                . = ALIGN (0x4)
                 0x0000000000002000                _sfixed = .
  *(.vectors .vectors.*)
@@ -5865,218 +6552,277 @@ LOAD /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
  .text.io_write
                 0x00000000000020fc       0x30 hal/src/hal_io.o
                 0x00000000000020fc                io_write
+ .text.io_read  0x000000000000212c       0x30 hal/src/hal_io.o
+                0x000000000000212c                io_read
  .text.Dummy_Handler
-                0x000000000000212c        0x2 samd21a/gcc/gcc/startup_samd21.o
-                0x000000000000212c                SVCall_Handler
-                0x000000000000212c                DMAC_Handler
-                0x000000000000212c                HardFault_Handler
-                0x000000000000212c                AC_Handler
-                0x000000000000212c                SysTick_Handler
-                0x000000000000212c                PendSV_Handler
-                0x000000000000212c                SERCOM1_Handler
-                0x000000000000212c                ADC_Handler
-                0x000000000000212c                NonMaskableInt_Handler
-                0x000000000000212c                TCC1_Handler
-                0x000000000000212c                SERCOM2_Handler
-                0x000000000000212c                TCC0_Handler
-                0x000000000000212c                RTC_Handler
-                0x000000000000212c                EIC_Handler
-                0x000000000000212c                WDT_Handler
-                0x000000000000212c                TC4_Handler
-                0x000000000000212c                USB_Handler
-                0x000000000000212c                TC3_Handler
-                0x000000000000212c                Dummy_Handler
-                0x000000000000212c                PM_Handler
-                0x000000000000212c                SERCOM5_Handler
-                0x000000000000212c                TCC2_Handler
-                0x000000000000212c                EVSYS_Handler
-                0x000000000000212c                SERCOM3_Handler
-                0x000000000000212c                SERCOM4_Handler
-                0x000000000000212c                I2S_Handler
-                0x000000000000212c                NVMCTRL_Handler
-                0x000000000000212c                SERCOM0_Handler
-                0x000000000000212c                DAC_Handler
-                0x000000000000212c                PTC_Handler
-                0x000000000000212c                TC5_Handler
-                0x000000000000212c                SYSCTRL_Handler
- *fill*         0x000000000000212e        0x2 
+                0x000000000000215c        0x2 samd21a/gcc/gcc/startup_samd21.o
+                0x000000000000215c                SVCall_Handler
+                0x000000000000215c                DMAC_Handler
+                0x000000000000215c                HardFault_Handler
+                0x000000000000215c                AC_Handler
+                0x000000000000215c                SysTick_Handler
+                0x000000000000215c                PendSV_Handler
+                0x000000000000215c                SERCOM1_Handler
+                0x000000000000215c                ADC_Handler
+                0x000000000000215c                NonMaskableInt_Handler
+                0x000000000000215c                TCC1_Handler
+                0x000000000000215c                SERCOM2_Handler
+                0x000000000000215c                TCC0_Handler
+                0x000000000000215c                RTC_Handler
+                0x000000000000215c                EIC_Handler
+                0x000000000000215c                WDT_Handler
+                0x000000000000215c                TC4_Handler
+                0x000000000000215c                USB_Handler
+                0x000000000000215c                TC3_Handler
+                0x000000000000215c                Dummy_Handler
+                0x000000000000215c                PM_Handler
+                0x000000000000215c                SERCOM5_Handler
+                0x000000000000215c                TCC2_Handler
+                0x000000000000215c                EVSYS_Handler
+                0x000000000000215c                SERCOM3_Handler
+                0x000000000000215c                SERCOM4_Handler
+                0x000000000000215c                I2S_Handler
+                0x000000000000215c                NVMCTRL_Handler
+                0x000000000000215c                SERCOM0_Handler
+                0x000000000000215c                DAC_Handler
+                0x000000000000215c                PTC_Handler
+                0x000000000000215c                TC5_Handler
+                0x000000000000215c                SYSCTRL_Handler
+ *fill*         0x000000000000215e        0x2 
  .text.Reset_Handler
-                0x0000000000002130       0xbc samd21a/gcc/gcc/startup_samd21.o
-                0x0000000000002130                Reset_Handler
+                0x0000000000002160       0xbc samd21a/gcc/gcc/startup_samd21.o
+                0x0000000000002160                Reset_Handler
  .text._pm_init
-                0x00000000000021ec       0x20 hpl/pm/hpl_pm.o
-                0x00000000000021ec                _pm_init
+                0x000000000000221c       0x20 hpl/pm/hpl_pm.o
+                0x000000000000221c                _pm_init
  .text._init_chip
-                0x000000000000220c       0x38 hpl/core/hpl_init.o
-                0x000000000000220c                _init_chip
- .text.assert   0x0000000000002244        0x8 hal/utils/src/utils_assert.o
-                0x0000000000002244                assert
+                0x000000000000223c       0x34 hpl/core/hpl_init.o
+                0x000000000000223c                _init_chip
+ .text.assert   0x0000000000002270        0x8 hal/utils/src/utils_assert.o
+                0x0000000000002270                assert
  .text._sysctrl_init_sources
-                0x000000000000224c       0x5c hpl/sysctrl/hpl_sysctrl.o
-                0x000000000000224c                _sysctrl_init_sources
+                0x0000000000002278       0x38 hpl/sysctrl/hpl_sysctrl.o
+                0x0000000000002278                _sysctrl_init_sources
  .text._sysctrl_init_referenced_generators
-                0x00000000000022a8        0x2 hpl/sysctrl/hpl_sysctrl.o
-                0x00000000000022a8                _sysctrl_init_referenced_generators
- *fill*         0x00000000000022aa        0x2 
+                0x00000000000022b0       0x10 hpl/sysctrl/hpl_sysctrl.o
+                0x00000000000022b0                _sysctrl_init_referenced_generators
  .text.usart_sync_write
-                0x00000000000022ac       0x68 hal/src/hal_usart_sync.o
+                0x00000000000022c0       0x68 hal/src/hal_usart_sync.o
  .text.usart_sync_read
-                0x0000000000002314       0x54 hal/src/hal_usart_sync.o
+                0x0000000000002328       0x54 hal/src/hal_usart_sync.o
  .text.usart_sync_init
-                0x0000000000002368       0x44 hal/src/hal_usart_sync.o
-                0x0000000000002368                usart_sync_init
+                0x000000000000237c       0x44 hal/src/hal_usart_sync.o
+                0x000000000000237c                usart_sync_init
  .text.usart_sync_enable
-                0x00000000000023ac       0x2c hal/src/hal_usart_sync.o
-                0x00000000000023ac                usart_sync_enable
+                0x00000000000023c0       0x2c hal/src/hal_usart_sync.o
+                0x00000000000023c0                usart_sync_enable
  .text.usart_sync_get_io_descriptor
-                0x00000000000023d8       0x28 hal/src/hal_usart_sync.o
-                0x00000000000023d8                usart_sync_get_io_descriptor
+                0x00000000000023ec       0x28 hal/src/hal_usart_sync.o
+                0x00000000000023ec                usart_sync_get_io_descriptor
  .text._gclk_init_generators_by_fref
-                0x0000000000002400       0x38 hpl/gclk/hpl_gclk.o
-                0x0000000000002400                _gclk_init_generators_by_fref
+                0x0000000000002414       0x3c hpl/gclk/hpl_gclk.o
+                0x0000000000002414                _gclk_init_generators_by_fref
  .text.SystemInit
-                0x0000000000002438       0x10 samd21a/gcc/system_samd21.o
-                0x0000000000002438                SystemInit
- .text.USART_0_example
-                0x0000000000002448       0x34 examples/driver_examples.o
-                0x0000000000002448                USART_0_example
+                0x0000000000002450       0x10 samd21a/gcc/system_samd21.o
+                0x0000000000002450                SystemInit
+ .text.usart_sync_get_desc
+                0x0000000000002460       0x18 examples/driver_examples.o
+                0x0000000000002460                usart_sync_get_desc
+ .text.usart_sync_enbl
+                0x0000000000002478       0x14 examples/driver_examples.o
+                0x0000000000002478                usart_sync_enbl
+ .text.bg_black
+                0x000000000000248c       0x34 examples/driver_examples.o
+                0x000000000000248c                bg_black
+ .text.bg_red   0x00000000000024c0       0x34 examples/driver_examples.o
+                0x00000000000024c0                bg_red
+ .text.bg_blue  0x00000000000024f4       0x34 examples/driver_examples.o
+                0x00000000000024f4                bg_blue
+ .text.color_reset
+                0x0000000000002528       0x34 examples/driver_examples.o
+                0x0000000000002528                color_reset
+ .text.fg_white
+                0x000000000000255c       0x64 examples/driver_examples.o
+                0x000000000000255c                fg_white
+ .text.fg_yellow
+                0x00000000000025c0       0x34 examples/driver_examples.o
+                0x00000000000025c0                fg_yellow
+ .text.filter   0x00000000000025f4       0x80 examples/driver_examples.o
+                0x00000000000025f4                filter
+ .text._spc     0x0000000000002674       0x1c examples/driver_examples.o
+                0x0000000000002674                _spc
+ .text._cr      0x0000000000002690       0x1c examples/driver_examples.o
+                0x0000000000002690                _cr
+ .text.USART_0_example_upper
+                0x00000000000026ac       0x1c examples/driver_examples.o
+                0x00000000000026ac                USART_0_example_upper
+ .text.USART_0_example_lower
+                0x00000000000026c8       0xc0 examples/driver_examples.o
+                0x00000000000026c8                USART_0_example_lower
+ .text._warm    0x0000000000002788       0x34 examples/warm.o
+                0x0000000000002788                _warm
+ .text.capture_warm
+                0x00000000000027bc       0x9c examples/warm.o
+                0x00000000000027bc                capture_warm
  .text.USART_0_PORT_init
-                0x000000000000247c       0x3c driver_init.o
-                0x000000000000247c                USART_0_PORT_init
+                0x0000000000002858       0x3c driver_init.o
+                0x0000000000002858                USART_0_PORT_init
  .text.USART_0_CLOCK_init
-                0x00000000000024b8       0x20 driver_init.o
-                0x00000000000024b8                USART_0_CLOCK_init
+                0x0000000000002894       0x20 driver_init.o
+                0x0000000000002894                USART_0_CLOCK_init
  .text.USART_0_init
-                0x00000000000024d8       0x2c driver_init.o
-                0x00000000000024d8                USART_0_init
+                0x00000000000028b4       0x2c driver_init.o
+                0x00000000000028b4                USART_0_init
+ .text.atmel_pins_init
+                0x00000000000028e0       0x4c driver_init.o
+                0x00000000000028e0                atmel_pins_init
  .text.system_init
-                0x0000000000002504       0x5c driver_init.o
-                0x0000000000002504                system_init
+                0x000000000000292c       0x1c driver_init.o
+                0x000000000000292c                system_init
  .text.hri_sercomusart_wait_for_sync
-                0x0000000000002560        0x8 hpl/sercom/hpl_sercom.o
+                0x0000000000002948        0x8 hpl/sercom/hpl_sercom.o
  .text.hri_sercomusart_clear_CTRLA_ENABLE_bit
-                0x0000000000002568       0x18 hpl/sercom/hpl_sercom.o
+                0x0000000000002950       0x18 hpl/sercom/hpl_sercom.o
  .text._usart_init
-                0x0000000000002580       0x90 hpl/sercom/hpl_sercom.o
+                0x0000000000002968       0x90 hpl/sercom/hpl_sercom.o
  .text._usart_sync_init
-                0x0000000000002610       0x2c hpl/sercom/hpl_sercom.o
-                0x0000000000002610                _usart_sync_init
+                0x00000000000029f8       0x2c hpl/sercom/hpl_sercom.o
+                0x00000000000029f8                _usart_sync_init
  .text._usart_sync_enable
-                0x000000000000263c       0x1c hpl/sercom/hpl_sercom.o
-                0x000000000000263c                _usart_sync_enable
+                0x0000000000002a24       0x1c hpl/sercom/hpl_sercom.o
+                0x0000000000002a24                _usart_sync_enable
  .text._usart_sync_write_byte
-                0x0000000000002658        0x8 hpl/sercom/hpl_sercom.o
-                0x0000000000002658                _usart_sync_write_byte
+                0x0000000000002a40        0x8 hpl/sercom/hpl_sercom.o
+                0x0000000000002a40                _usart_sync_write_byte
  .text._usart_sync_read_byte
-                0x0000000000002660        0x8 hpl/sercom/hpl_sercom.o
-                0x0000000000002660                _usart_sync_read_byte
+                0x0000000000002a48        0x8 hpl/sercom/hpl_sercom.o
+                0x0000000000002a48                _usart_sync_read_byte
  .text._usart_sync_is_ready_to_send
-                0x0000000000002668        0xa hpl/sercom/hpl_sercom.o
-                0x0000000000002668                _usart_sync_is_ready_to_send
+                0x0000000000002a50        0xa hpl/sercom/hpl_sercom.o
+                0x0000000000002a50                _usart_sync_is_ready_to_send
  .text._usart_sync_is_transmit_done
-                0x0000000000002672        0xa hpl/sercom/hpl_sercom.o
-                0x0000000000002672                _usart_sync_is_transmit_done
+                0x0000000000002a5a        0xa hpl/sercom/hpl_sercom.o
+                0x0000000000002a5a                _usart_sync_is_transmit_done
  .text._usart_sync_is_byte_received
-                0x000000000000267c        0xa hpl/sercom/hpl_sercom.o
-                0x000000000000267c                _usart_sync_is_byte_received
- *fill*         0x0000000000002686        0x2 
+                0x0000000000002a64        0xa hpl/sercom/hpl_sercom.o
+                0x0000000000002a64                _usart_sync_is_byte_received
+ *fill*         0x0000000000002a6e        0x2 
  .text.atmel_start_init
-                0x0000000000002688        0xc atmel_start.o
-                0x0000000000002688                atmel_start_init
+                0x0000000000002a70        0xc atmel_start.o
+                0x0000000000002a70                atmel_start_init
+ .text.new_ascii_emit
+                0x0000000000002a7c       0x30 src/dump.o
+                0x0000000000002a7c                new_ascii_emit
+ .text.parsed_low
+                0x0000000000002aac       0x3c src/dump.o
+                0x0000000000002aac                parsed_low
+ .text.parsed_hi
+                0x0000000000002ae8       0x20 src/dump.o
+                0x0000000000002ae8                parsed_hi
+ .text.cdump    0x0000000000002b08       0xd0 src/dump.o
+                0x0000000000002b08                cdump
  .text.pins_setup
-                0x0000000000002694       0x28 pins.o
-                0x0000000000002694                pins_setup
+                0x0000000000002bd8       0x28 pins.o
+                0x0000000000002bd8                pins_setup
  .text.toggle_d11
-                0x00000000000026bc       0x10 pins.o
-                0x00000000000026bc                toggle_d11
- .text.waste    0x00000000000026cc       0x1c main.o
-                0x00000000000026cc                waste
- .text.blink    0x00000000000026e8       0x20 main.o
-                0x00000000000026e8                blink
+                0x0000000000002c00       0x10 pins.o
+                0x0000000000002c00                toggle_d11
+ .text.delays   0x0000000000002c10       0x1c main.o
+                0x0000000000002c10                delays
+ .text.blink_two
+                0x0000000000002c2c       0x20 main.o
+                0x0000000000002c2c                blink_two
  .text.startup.main
-                0x0000000000002708       0x34 main.o
-                0x0000000000002708                main
+                0x0000000000002c4c       0x70 main.o
+                0x0000000000002c4c                main
  .text.__libc_init_array
-                0x000000000000273c       0x48 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
-                0x000000000000273c                __libc_init_array
+                0x0000000000002cbc       0x48 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
+                0x0000000000002cbc                __libc_init_array
  *(.glue_7t)
- .glue_7t       0x0000000000002784        0x0 linker stubs
+ .glue_7t       0x0000000000002d04        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x0000000000002784        0x0 linker stubs
+ .glue_7        0x0000000000002d04        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
  .rodata.str1.1
-                0x0000000000002784       0x14 hal/src/hal_io.o
+                0x0000000000002d04       0x14 hal/src/hal_io.o
  .rodata.str1.1
-                0x0000000000002798       0x1c hal/src/hal_usart_sync.o
+                0x0000000000002d18       0x1c hal/src/hal_usart_sync.o
  .rodata.str1.1
-                0x00000000000027b4        0xd examples/driver_examples.o
+                0x0000000000002d34       0xdb examples/driver_examples.o
+                                         0xe6 (size before relaxing)
  .rodata.str1.1
-                0x00000000000027c1       0x1b hpl/sercom/hpl_sercom.o
+                0x0000000000002e0f       0x24 examples/warm.o
+ .rodata.str1.1
+                0x0000000000002e33       0x1b hpl/sercom/hpl_sercom.o
+ .rodata.str1.1
+                0x0000000000002e4e       0x1b src/dump.o
+                                          0x8 (size before relaxing)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000000000027dc                . = ALIGN (0x4)
+                0x0000000000002e6c                . = ALIGN (0x4)
+ *fill*         0x0000000000002e4e        0x2 
  *(.init)
- .init          0x00000000000027dc        0x4 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
-                0x00000000000027dc                _init
- .init          0x00000000000027e0        0x8 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
-                0x00000000000027e8                . = ALIGN (0x4)
-                0x00000000000027e8                __preinit_array_start = .
+ .init          0x0000000000002e50        0x4 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
+                0x0000000000002e50                _init
+ .init          0x0000000000002e54        0x8 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
+                0x0000000000002e5c                . = ALIGN (0x4)
+                0x0000000000002e5c                __preinit_array_start = .
  *(.preinit_array)
-                0x00000000000027e8                __preinit_array_end = .
-                0x00000000000027e8                . = ALIGN (0x4)
-                0x00000000000027e8                __init_array_start = .
+                0x0000000000002e5c                __preinit_array_end = .
+                0x0000000000002e5c                . = ALIGN (0x4)
+                0x0000000000002e5c                __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x00000000000027e8        0x4 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
-                0x00000000000027ec                __init_array_end = .
-                0x00000000000027ec                . = ALIGN (0x4)
+ .init_array    0x0000000000002e5c        0x4 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+                0x0000000000002e60                __init_array_end = .
+                0x0000000000002e60                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *crtend.o(.ctors)
-                0x00000000000027ec                . = ALIGN (0x4)
+                0x0000000000002e60                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00000000000027ec        0x4 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
-                0x00000000000027ec                _fini
- .fini          0x00000000000027f0        0x8 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
-                0x00000000000027f8                . = ALIGN (0x4)
-                0x00000000000027f8                __fini_array_start = .
+ .fini          0x0000000000002e60        0x4 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
+                0x0000000000002e60                _fini
+ .fini          0x0000000000002e64        0x8 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
+                0x0000000000002e6c                . = ALIGN (0x4)
+                0x0000000000002e6c                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00000000000027f8        0x4 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+ .fini_array    0x0000000000002e6c        0x4 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
-                0x00000000000027fc                __fini_array_end = .
+                0x0000000000002e70                __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *crtend.o(.dtors)
-                0x00000000000027fc                . = ALIGN (0x4)
-                0x00000000000027fc                _efixed = .
+                0x0000000000002e70                . = ALIGN (0x4)
+                0x0000000000002e70                _efixed = .
                 [!provide]                        PROVIDE (__exidx_start = .)
 
-.vfp11_veneer   0x00000000000027fc        0x0
- .vfp11_veneer  0x00000000000027fc        0x0 linker stubs
+.vfp11_veneer   0x0000000000002e70        0x0
+ .vfp11_veneer  0x0000000000002e70        0x0 linker stubs
 
-.v4_bx          0x00000000000027fc        0x0
- .v4_bx         0x00000000000027fc        0x0 linker stubs
+.v4_bx          0x0000000000002e70        0x0
+ .v4_bx         0x0000000000002e70        0x0 linker stubs
 
-.iplt           0x00000000000027fc        0x0
- .iplt          0x00000000000027fc        0x0 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.iplt           0x0000000000002e70        0x0
+ .iplt          0x0000000000002e70        0x0 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
-.igot.plt       0x00000000000027fc        0x0
- .igot.plt      0x00000000000027fc        0x0 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.igot.plt       0x0000000000002e70        0x0
+ .igot.plt      0x0000000000002e70        0x0 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
-.eh_frame       0x00000000000027fc        0x0
- .eh_frame      0x00000000000027fc        0x0 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.eh_frame       0x0000000000002e70        0x0
+ .eh_frame      0x0000000000002e70        0x0 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
-.rel.dyn        0x00000000000027fc        0x0
- .rel.iplt      0x00000000000027fc        0x0 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.rel.dyn        0x0000000000002e70        0x0
+ .rel.iplt      0x0000000000002e70        0x0 /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
                 [!provide]                        PROVIDE (__exidx_end = .)
-                0x00000000000027fc                . = ALIGN (0x4)
-                0x00000000000027fc                _etext = .
+                0x0000000000002e70                . = ALIGN (0x4)
+                0x0000000000002e70                _etext = .
 
-.relocate       0x0000000020000000        0x4 load address 0x00000000000027fc
+.relocate       0x0000000020000000        0x4 load address 0x0000000000002e70
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -6086,29 +6832,41 @@ LOAD /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
                 0x0000000020000004                . = ALIGN (0x4)
                 0x0000000020000004                _erelocate = .
 
-.bss            0x0000000020000004       0x28 load address 0x0000000000002800
+.bss            0x0000000020000004       0x50 load address 0x0000000000002e74
                 0x0000000020000004                . = ALIGN (0x4)
                 0x0000000020000004                _sbss = .
                 0x0000000020000004                _szero = .
  *(.bss .bss.*)
  .bss           0x0000000020000004       0x1c /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+ .bss           0x0000000020000020        0x4 examples/warm.o
+                0x0000000020000020                state_warm
+ .bss           0x0000000020000024        0x8 src/dump.o
+                0x0000000020000024                rbyte
+                0x0000000020000028                COUNTER
  *(COMMON)
- COMMON         0x0000000020000020        0xc driver_init.o
-                0x0000000020000020                USART_0
-                0x000000002000002c                . = ALIGN (0x4)
-                0x000000002000002c                _ebss = .
-                0x000000002000002c                _ezero = .
+ COMMON         0x000000002000002c       0x18 examples/driver_examples.o
+                0x000000002000002c                tib
+                0x000000002000003c                io
+                0x0000000020000040                buf
+ COMMON         0x0000000020000044        0xc driver_init.o
+                0x0000000020000044                USART_0
+ COMMON         0x0000000020000050        0x1 src/dump.o
+                0x0000000020000050                byte_r
+                0x0000000020000054                . = ALIGN (0x4)
+ *fill*         0x0000000020000051        0x3 
+                0x0000000020000054                _ebss = .
+                0x0000000020000054                _ezero = .
 
-.stack          0x000000002000002c     0x2004 load address 0x0000000000002828
-                0x0000000020000030                . = ALIGN (0x8)
- *fill*         0x000000002000002c        0x4 
-                0x0000000020000030                _sstack = .
-                0x0000000020002030                . = (. + STACK_SIZE)
- *fill*         0x0000000020000030     0x2000 
-                0x0000000020002030                . = ALIGN (0x8)
-                0x0000000020002030                _estack = .
-                0x0000000020002030                . = ALIGN (0x4)
-                0x0000000020002030                _end = .
+.stack          0x0000000020000054     0x2004 load address 0x0000000000002ec4
+                0x0000000020000058                . = ALIGN (0x8)
+ *fill*         0x0000000020000054        0x4 
+                0x0000000020000058                _sstack = .
+                0x0000000020002058                . = (. + STACK_SIZE)
+ *fill*         0x0000000020000058     0x2000 
+                0x0000000020002058                . = ALIGN (0x8)
+                0x0000000020002058                _estack = .
+                0x0000000020002058                . = ALIGN (0x4)
+                0x0000000020002058                _end = .
                 [!provide]                        PROVIDE (end = .)
 OUTPUT(AtmelStart.elf elf32-littlearm)
 
@@ -6139,19 +6897,23 @@ OUTPUT(AtmelStart.elf elf32-littlearm)
  .ARM.attributes
                 0x000000000000020c       0x32 examples/driver_examples.o
  .ARM.attributes
-                0x000000000000023e       0x32 driver_init.o
+                0x000000000000023e       0x32 examples/warm.o
  .ARM.attributes
-                0x0000000000000270       0x32 hpl/sercom/hpl_sercom.o
+                0x0000000000000270       0x32 driver_init.o
  .ARM.attributes
-                0x00000000000002a2       0x32 atmel_start.o
+                0x00000000000002a2       0x32 hpl/sercom/hpl_sercom.o
  .ARM.attributes
-                0x00000000000002d4       0x32 pins.o
+                0x00000000000002d4       0x32 atmel_start.o
  .ARM.attributes
-                0x0000000000000306       0x32 main.o
+                0x0000000000000306       0x32 src/dump.o
  .ARM.attributes
-                0x0000000000000338       0x2c /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
+                0x0000000000000338       0x32 pins.o
  .ARM.attributes
-                0x0000000000000364       0x1e /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
+                0x000000000000036a       0x32 main.o
+ .ARM.attributes
+                0x000000000000039c       0x2c /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000000000003c8       0x1e /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
 
 .comment        0x0000000000000000       0x7f
  .comment       0x0000000000000000       0x7f hal/src/hal_io.o
@@ -6165,58 +6927,66 @@ OUTPUT(AtmelStart.elf elf32-littlearm)
  .comment       0x000000000000007f       0x80 hpl/gclk/hpl_gclk.o
  .comment       0x000000000000007f       0x80 samd21a/gcc/system_samd21.o
  .comment       0x000000000000007f       0x80 examples/driver_examples.o
+ .comment       0x000000000000007f       0x80 examples/warm.o
  .comment       0x000000000000007f       0x80 driver_init.o
  .comment       0x000000000000007f       0x80 hpl/sercom/hpl_sercom.o
  .comment       0x000000000000007f       0x80 atmel_start.o
+ .comment       0x000000000000007f       0x80 src/dump.o
  .comment       0x000000000000007f       0x80 pins.o
  .comment       0x000000000000007f       0x80 main.o
 
-.debug_info     0x0000000000000000    0x18f58
+.debug_info     0x0000000000000000    0x1a611
  .debug_info    0x0000000000000000      0x28f hal/src/hal_io.o
  .debug_info    0x000000000000028f     0x35cb samd21a/gcc/gcc/startup_samd21.o
  .debug_info    0x000000000000385a      0xbaa hpl/pm/hpl_pm.o
  .debug_info    0x0000000000004404      0x625 hpl/core/hpl_init.o
  .debug_info    0x0000000000004a29       0xf6 hal/utils/src/utils_assert.o
- .debug_info    0x0000000000004b1f     0x12e3 hpl/sysctrl/hpl_sysctrl.o
- .debug_info    0x0000000000005e02      0xbbd hal/src/hal_usart_sync.o
- .debug_info    0x00000000000069bf      0x567 hpl/gclk/hpl_gclk.o
- .debug_info    0x0000000000006f26       0xbc samd21a/gcc/system_samd21.o
- .debug_info    0x0000000000006fe2      0x24a examples/driver_examples.o
- .debug_info    0x000000000000722c     0x7220 driver_init.o
- .debug_info    0x000000000000e44c     0x9909 hpl/sercom/hpl_sercom.o
- .debug_info    0x0000000000017d55      0x1ea atmel_start.o
- .debug_info    0x0000000000017f3f      0x7bf pins.o
- .debug_info    0x00000000000186fe      0x85a main.o
+ .debug_info    0x0000000000004b1f     0x1233 hpl/sysctrl/hpl_sysctrl.o
+ .debug_info    0x0000000000005d52      0xbbd hal/src/hal_usart_sync.o
+ .debug_info    0x000000000000690f      0x567 hpl/gclk/hpl_gclk.o
+ .debug_info    0x0000000000006e76       0xbc samd21a/gcc/system_samd21.o
+ .debug_info    0x0000000000006f32      0x808 examples/driver_examples.o
+ .debug_info    0x000000000000773a      0x372 examples/warm.o
+ .debug_info    0x0000000000007aac     0x72b9 driver_init.o
+ .debug_info    0x000000000000ed65     0x9909 hpl/sercom/hpl_sercom.o
+ .debug_info    0x000000000001866e      0x1ea atmel_start.o
+ .debug_info    0x0000000000018858      0xc2f src/dump.o
+ .debug_info    0x0000000000019487      0x7bf pins.o
+ .debug_info    0x0000000000019c46      0x9cb main.o
 
-.debug_abbrev   0x0000000000000000     0x1d8d
+.debug_abbrev   0x0000000000000000     0x2283
  .debug_abbrev  0x0000000000000000      0x112 hal/src/hal_io.o
  .debug_abbrev  0x0000000000000112      0x25e samd21a/gcc/gcc/startup_samd21.o
  .debug_abbrev  0x0000000000000370      0x231 hpl/pm/hpl_pm.o
  .debug_abbrev  0x00000000000005a1      0x1d6 hpl/core/hpl_init.o
  .debug_abbrev  0x0000000000000777       0x84 hal/utils/src/utils_assert.o
- .debug_abbrev  0x00000000000007fb      0x219 hpl/sysctrl/hpl_sysctrl.o
- .debug_abbrev  0x0000000000000a14      0x225 hal/src/hal_usart_sync.o
- .debug_abbrev  0x0000000000000c39      0x1ce hpl/gclk/hpl_gclk.o
- .debug_abbrev  0x0000000000000e07       0x88 samd21a/gcc/system_samd21.o
- .debug_abbrev  0x0000000000000e8f       0xff examples/driver_examples.o
- .debug_abbrev  0x0000000000000f8e      0x391 driver_init.o
- .debug_abbrev  0x000000000000131f      0x619 hpl/sercom/hpl_sercom.o
- .debug_abbrev  0x0000000000001938       0xd7 atmel_start.o
- .debug_abbrev  0x0000000000001a0f      0x197 pins.o
- .debug_abbrev  0x0000000000001ba6      0x1e7 main.o
+ .debug_abbrev  0x00000000000007fb      0x208 hpl/sysctrl/hpl_sysctrl.o
+ .debug_abbrev  0x0000000000000a03      0x225 hal/src/hal_usart_sync.o
+ .debug_abbrev  0x0000000000000c28      0x1ce hpl/gclk/hpl_gclk.o
+ .debug_abbrev  0x0000000000000df6       0x88 samd21a/gcc/system_samd21.o
+ .debug_abbrev  0x0000000000000e7e      0x177 examples/driver_examples.o
+ .debug_abbrev  0x0000000000000ff5      0x199 examples/warm.o
+ .debug_abbrev  0x000000000000118e      0x3b4 driver_init.o
+ .debug_abbrev  0x0000000000001542      0x619 hpl/sercom/hpl_sercom.o
+ .debug_abbrev  0x0000000000001b5b       0xd7 atmel_start.o
+ .debug_abbrev  0x0000000000001c32      0x267 src/dump.o
+ .debug_abbrev  0x0000000000001e99      0x197 pins.o
+ .debug_abbrev  0x0000000000002030      0x253 main.o
 
-.debug_loc      0x0000000000000000     0x60b9
+.debug_loc      0x0000000000000000     0x63b8
  .debug_loc     0x0000000000000000       0xf2 hal/src/hal_io.o
  .debug_loc     0x00000000000000f2       0x2b samd21a/gcc/gcc/startup_samd21.o
  .debug_loc     0x000000000000011d      0x10d hpl/pm/hpl_pm.o
  .debug_loc     0x000000000000022a       0x2c hpl/core/hpl_init.o
- .debug_loc     0x0000000000000256      0x14b hpl/sysctrl/hpl_sysctrl.o
- .debug_loc     0x00000000000003a1      0x605 hal/src/hal_usart_sync.o
- .debug_loc     0x00000000000009a6      0x1be hpl/gclk/hpl_gclk.o
- .debug_loc     0x0000000000000b64      0x4ac driver_init.o
- .debug_loc     0x0000000000001010     0x50a9 hpl/sercom/hpl_sercom.o
+ .debug_loc     0x0000000000000256       0xbe hpl/sysctrl/hpl_sysctrl.o
+ .debug_loc     0x0000000000000314      0x605 hal/src/hal_usart_sync.o
+ .debug_loc     0x0000000000000919      0x1be hpl/gclk/hpl_gclk.o
+ .debug_loc     0x0000000000000ad7      0x4aa driver_init.o
+ .debug_loc     0x0000000000000f81     0x50a9 hpl/sercom/hpl_sercom.o
+ .debug_loc     0x000000000000602a      0x235 src/dump.o
+ .debug_loc     0x000000000000625f      0x159 main.o
 
-.debug_aranges  0x0000000000000000      0x798
+.debug_aranges  0x0000000000000000      0x888
  .debug_aranges
                 0x0000000000000000       0x30 hal/src/hal_io.o
  .debug_aranges
@@ -6236,36 +7006,42 @@ OUTPUT(AtmelStart.elf elf32-littlearm)
  .debug_aranges
                 0x00000000000001c0       0x20 samd21a/gcc/system_samd21.o
  .debug_aranges
-                0x00000000000001e0       0x20 examples/driver_examples.o
+                0x00000000000001e0       0x88 examples/driver_examples.o
  .debug_aranges
-                0x0000000000000200       0x38 driver_init.o
+                0x0000000000000268       0x28 examples/warm.o
  .debug_aranges
-                0x0000000000000238      0x4e8 hpl/sercom/hpl_sercom.o
+                0x0000000000000290       0x50 driver_init.o
  .debug_aranges
-                0x0000000000000720       0x20 atmel_start.o
+                0x00000000000002e0      0x4e8 hpl/sercom/hpl_sercom.o
  .debug_aranges
-                0x0000000000000740       0x28 pins.o
+                0x00000000000007c8       0x20 atmel_start.o
  .debug_aranges
-                0x0000000000000768       0x30 main.o
+                0x00000000000007e8       0x38 src/dump.o
+ .debug_aranges
+                0x0000000000000820       0x28 pins.o
+ .debug_aranges
+                0x0000000000000848       0x40 main.o
 
-.debug_ranges   0x0000000000000000     0x15c8
+.debug_ranges   0x0000000000000000     0x1760
  .debug_ranges  0x0000000000000000       0x20 hal/src/hal_io.o
  .debug_ranges  0x0000000000000020       0x18 samd21a/gcc/gcc/startup_samd21.o
  .debug_ranges  0x0000000000000038       0x50 hpl/pm/hpl_pm.o
- .debug_ranges  0x0000000000000088       0x28 hpl/core/hpl_init.o
- .debug_ranges  0x00000000000000b0       0x10 hal/utils/src/utils_assert.o
- .debug_ranges  0x00000000000000c0       0x48 hpl/sysctrl/hpl_sysctrl.o
- .debug_ranges  0x0000000000000108       0x98 hal/src/hal_usart_sync.o
- .debug_ranges  0x00000000000001a0       0x30 hpl/gclk/hpl_gclk.o
- .debug_ranges  0x00000000000001d0       0x10 samd21a/gcc/system_samd21.o
- .debug_ranges  0x00000000000001e0       0x10 examples/driver_examples.o
- .debug_ranges  0x00000000000001f0      0x180 driver_init.o
- .debug_ranges  0x0000000000000370     0x11f0 hpl/sercom/hpl_sercom.o
- .debug_ranges  0x0000000000001560       0x10 atmel_start.o
- .debug_ranges  0x0000000000001570       0x18 pins.o
- .debug_ranges  0x0000000000001588       0x40 main.o
+ .debug_ranges  0x0000000000000088       0x30 hpl/core/hpl_init.o
+ .debug_ranges  0x00000000000000b8       0x10 hal/utils/src/utils_assert.o
+ .debug_ranges  0x00000000000000c8       0x78 hpl/sysctrl/hpl_sysctrl.o
+ .debug_ranges  0x0000000000000140       0x98 hal/src/hal_usart_sync.o
+ .debug_ranges  0x00000000000001d8       0x30 hpl/gclk/hpl_gclk.o
+ .debug_ranges  0x0000000000000208       0x10 samd21a/gcc/system_samd21.o
+ .debug_ranges  0x0000000000000218       0x78 examples/driver_examples.o
+ .debug_ranges  0x0000000000000290       0x18 examples/warm.o
+ .debug_ranges  0x00000000000002a8      0x190 driver_init.o
+ .debug_ranges  0x0000000000000438     0x11f0 hpl/sercom/hpl_sercom.o
+ .debug_ranges  0x0000000000001628       0x10 atmel_start.o
+ .debug_ranges  0x0000000000001638       0x78 src/dump.o
+ .debug_ranges  0x00000000000016b0       0x18 pins.o
+ .debug_ranges  0x00000000000016c8       0x98 main.o
 
-.debug_macro    0x0000000000000000    0x15d61
+.debug_macro    0x0000000000000000    0x16825
  .debug_macro   0x0000000000000000      0x42e hal/src/hal_io.o
  .debug_macro   0x000000000000042e      0xa48 hal/src/hal_io.o
  .debug_macro   0x0000000000000e76      0x16d hal/src/hal_io.o
@@ -6380,71 +7156,79 @@ OUTPUT(AtmelStart.elf elf32-littlearm)
  .debug_macro   0x000000000001338d      0x437 hpl/gclk/hpl_gclk.o
  .debug_macro   0x00000000000137c4      0x1f3 hpl/gclk/hpl_gclk.o
  .debug_macro   0x00000000000139b7      0x2f3 samd21a/gcc/system_samd21.o
- .debug_macro   0x0000000000013caa      0x4de examples/driver_examples.o
- .debug_macro   0x0000000000014188       0x4c examples/driver_examples.o
- .debug_macro   0x00000000000141d4      0x4f1 driver_init.o
- .debug_macro   0x00000000000146c5      0x663 hpl/sercom/hpl_sercom.o
- .debug_macro   0x0000000000014d28       0x70 hpl/sercom/hpl_sercom.o
- .debug_macro   0x0000000000014d98       0xba hpl/sercom/hpl_sercom.o
- .debug_macro   0x0000000000014e52       0x10 hpl/sercom/hpl_sercom.o
- .debug_macro   0x0000000000014e62       0x1c hpl/sercom/hpl_sercom.o
- .debug_macro   0x0000000000014e7e       0x22 hpl/sercom/hpl_sercom.o
- .debug_macro   0x0000000000014ea0       0x10 hpl/sercom/hpl_sercom.o
- .debug_macro   0x0000000000014eb0      0x4d5 atmel_start.o
- .debug_macro   0x0000000000015385      0x4de pins.o
- .debug_macro   0x0000000000015863       0x10 pins.o
- .debug_macro   0x0000000000015873      0x4ee main.o
+ .debug_macro   0x0000000000013caa      0x4f6 examples/driver_examples.o
+ .debug_macro   0x00000000000141a0       0x4c examples/driver_examples.o
+ .debug_macro   0x00000000000141ec      0x4f4 examples/warm.o
+ .debug_macro   0x00000000000146e0      0x4f1 driver_init.o
+ .debug_macro   0x0000000000014bd1      0x663 hpl/sercom/hpl_sercom.o
+ .debug_macro   0x0000000000015234       0x70 hpl/sercom/hpl_sercom.o
+ .debug_macro   0x00000000000152a4       0xba hpl/sercom/hpl_sercom.o
+ .debug_macro   0x000000000001535e       0x10 hpl/sercom/hpl_sercom.o
+ .debug_macro   0x000000000001536e       0x1c hpl/sercom/hpl_sercom.o
+ .debug_macro   0x000000000001538a       0x22 hpl/sercom/hpl_sercom.o
+ .debug_macro   0x00000000000153ac       0x10 hpl/sercom/hpl_sercom.o
+ .debug_macro   0x00000000000153bc      0x4d5 atmel_start.o
+ .debug_macro   0x0000000000015891      0x5b6 src/dump.o
+ .debug_macro   0x0000000000015e47      0x4de pins.o
+ .debug_macro   0x0000000000016325       0x10 pins.o
+ .debug_macro   0x0000000000016335      0x4f0 main.o
 
-.debug_line     0x0000000000000000     0x91af
+.debug_line     0x0000000000000000     0xa58d
  .debug_line    0x0000000000000000      0x747 hal/src/hal_io.o
  .debug_line    0x0000000000000747      0x4c7 samd21a/gcc/gcc/startup_samd21.o
  .debug_line    0x0000000000000c0e      0x7b8 hpl/pm/hpl_pm.o
- .debug_line    0x00000000000013c6      0x7e8 hpl/core/hpl_init.o
- .debug_line    0x0000000000001bae      0x6fb hal/utils/src/utils_assert.o
- .debug_line    0x00000000000022a9      0x7cc hpl/sysctrl/hpl_sysctrl.o
- .debug_line    0x0000000000002a75      0x935 hal/src/hal_usart_sync.o
- .debug_line    0x00000000000033aa      0x781 hpl/gclk/hpl_gclk.o
- .debug_line    0x0000000000003b2b      0x48d samd21a/gcc/system_samd21.o
- .debug_line    0x0000000000003fb8      0x827 examples/driver_examples.o
- .debug_line    0x00000000000047df      0x952 driver_init.o
- .debug_line    0x0000000000005131     0x27f7 hpl/sercom/hpl_sercom.o
- .debug_line    0x0000000000007928      0x804 atmel_start.o
- .debug_line    0x000000000000812c      0x825 pins.o
- .debug_line    0x0000000000008951      0x85e main.o
+ .debug_line    0x00000000000013c6      0x7f4 hpl/core/hpl_init.o
+ .debug_line    0x0000000000001bba      0x6fb hal/utils/src/utils_assert.o
+ .debug_line    0x00000000000022b5      0x7ab hpl/sysctrl/hpl_sysctrl.o
+ .debug_line    0x0000000000002a60      0x935 hal/src/hal_usart_sync.o
+ .debug_line    0x0000000000003395      0x781 hpl/gclk/hpl_gclk.o
+ .debug_line    0x0000000000003b16      0x48d samd21a/gcc/system_samd21.o
+ .debug_line    0x0000000000003fa3      0x95e examples/driver_examples.o
+ .debug_line    0x0000000000004901      0x8a7 examples/warm.o
+ .debug_line    0x00000000000051a8      0x992 driver_init.o
+ .debug_line    0x0000000000005b3a     0x27f7 hpl/sercom/hpl_sercom.o
+ .debug_line    0x0000000000008331      0x804 atmel_start.o
+ .debug_line    0x0000000000008b35      0x96a src/dump.o
+ .debug_line    0x000000000000949f      0x825 pins.o
+ .debug_line    0x0000000000009cc4      0x8c9 main.o
 
-.debug_str      0x0000000000000000    0x78ad1
- .debug_str     0x0000000000000000    0x6ded6 hal/src/hal_io.o
+.debug_str      0x0000000000000000    0x7b7d2
+ .debug_str     0x0000000000000000    0x6ded1 hal/src/hal_io.o
                                       0x6e312 (size before relaxing)
- .debug_str     0x000000000006ded6     0x10b1 samd21a/gcc/gcc/startup_samd21.o
+ .debug_str     0x000000000006ded1     0x10b1 samd21a/gcc/gcc/startup_samd21.o
                                       0x6e52c (size before relaxing)
- .debug_str     0x000000000006ef87      0x613 hpl/pm/hpl_pm.o
+ .debug_str     0x000000000006ef82      0x613 hpl/pm/hpl_pm.o
                                       0x6e90b (size before relaxing)
- .debug_str     0x000000000006f59a     0x17c1 hpl/core/hpl_init.o
+ .debug_str     0x000000000006f595     0x17c1 hpl/core/hpl_init.o
                                       0x6fdac (size before relaxing)
- .debug_str     0x0000000000070d5b       0x2f hal/utils/src/utils_assert.o
+ .debug_str     0x0000000000070d56       0x2a hal/utils/src/utils_assert.o
                                       0x6e275 (size before relaxing)
- .debug_str     0x0000000000070d8a     0x11fc hpl/sysctrl/hpl_sysctrl.o
-                                      0x6f559 (size before relaxing)
- .debug_str     0x0000000000071f86      0x9ad hal/src/hal_usart_sync.o
+ .debug_str     0x0000000000070d80     0x1178 hpl/sysctrl/hpl_sysctrl.o
+                                      0x6f4e4 (size before relaxing)
+ .debug_str     0x0000000000071ef8      0x9a2 hal/src/hal_usart_sync.o
                                       0x6edb2 (size before relaxing)
- .debug_str     0x0000000000072933      0x8d0 hpl/gclk/hpl_gclk.o
-                                      0x6eb8f (size before relaxing)
- .debug_str     0x0000000000073203       0x59 samd21a/gcc/system_samd21.o
+ .debug_str     0x000000000007289a      0x8d6 hpl/gclk/hpl_gclk.o
+                                      0x6eb95 (size before relaxing)
+ .debug_str     0x0000000000073170       0x59 samd21a/gcc/system_samd21.o
                                       0x6d3ac (size before relaxing)
- .debug_str     0x000000000007325c      0x1f6 examples/driver_examples.o
-                                      0x6eaf1 (size before relaxing)
- .debug_str     0x0000000000073452      0xd10 driver_init.o
-                                      0x709a4 (size before relaxing)
- .debug_str     0x0000000000074162     0x48dd hpl/sercom/hpl_sercom.o
+ .debug_str     0x00000000000731c9      0x2cf examples/driver_examples.o
+                                      0x6ebd2 (size before relaxing)
+ .debug_str     0x0000000000073498       0x42 examples/warm.o
+                                      0x6eb23 (size before relaxing)
+ .debug_str     0x00000000000734da      0xd40 driver_init.o
+                                      0x709d4 (size before relaxing)
+ .debug_str     0x000000000007421a     0x48c4 hpl/sercom/hpl_sercom.o
                                       0x73d29 (size before relaxing)
- .debug_str     0x0000000000078a3f       0x3a atmel_start.o
+ .debug_str     0x0000000000078ade       0x22 atmel_start.o
                                       0x6e61a (size before relaxing)
- .debug_str     0x0000000000078a79       0x30 pins.o
+ .debug_str     0x0000000000078b00     0x2c68 src/dump.o
+                                      0x712e8 (size before relaxing)
+ .debug_str     0x000000000007b768       0x30 pins.o
                                       0x6e7ae (size before relaxing)
- .debug_str     0x0000000000078aa9       0x28 main.o
-                                      0x6e7fe (size before relaxing)
+ .debug_str     0x000000000007b798       0x3a main.o
+                                      0x6e833 (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x1480
+.debug_frame    0x0000000000000000     0x1710
  .debug_frame   0x0000000000000000       0x58 hal/src/hal_io.o
  .debug_frame   0x0000000000000058       0x3c samd21a/gcc/gcc/startup_samd21.o
  .debug_frame   0x0000000000000094       0x40 hpl/pm/hpl_pm.o
@@ -6454,10 +7238,12 @@ OUTPUT(AtmelStart.elf elf32-littlearm)
  .debug_frame   0x000000000000014c      0x1f4 hal/src/hal_usart_sync.o
  .debug_frame   0x0000000000000340       0x30 hpl/gclk/hpl_gclk.o
  .debug_frame   0x0000000000000370       0x30 samd21a/gcc/system_samd21.o
- .debug_frame   0x00000000000003a0       0x2c examples/driver_examples.o
- .debug_frame   0x00000000000003cc       0x70 driver_init.o
- .debug_frame   0x000000000000043c      0xf68 hpl/sercom/hpl_sercom.o
- .debug_frame   0x00000000000013a4       0x28 atmel_start.o
- .debug_frame   0x00000000000013cc       0x30 pins.o
- .debug_frame   0x00000000000013fc       0x58 main.o
- .debug_frame   0x0000000000001454       0x2c /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000000000003a0      0x184 examples/driver_examples.o
+ .debug_frame   0x0000000000000524       0x44 examples/warm.o
+ .debug_frame   0x0000000000000568       0xb8 driver_init.o
+ .debug_frame   0x0000000000000620      0xf68 hpl/sercom/hpl_sercom.o
+ .debug_frame   0x0000000000001588       0x28 atmel_start.o
+ .debug_frame   0x00000000000015b0       0x78 src/dump.o
+ .debug_frame   0x0000000000001628       0x30 pins.o
+ .debug_frame   0x0000000000001658       0x8c main.o
+ .debug_frame   0x00000000000016e4       0x2c /home/chris/dev/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
