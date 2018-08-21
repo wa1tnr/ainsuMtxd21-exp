@@ -1,5 +1,5 @@
 /* nyb_stack.c */
-/* 20 Aug 2018 17:44 UTC */
+/* 20 Aug 2018 21:50 UTC */
 /* wa1tnr, Connecticut USA */
 /* LICENSE: LGPL v2.1 */
 
@@ -123,6 +123,7 @@ uint8_t* ndump(void) { // nybble dump
     } // for
 
     ram = (char*) &test_byte;
+
     io_write(io, (uint8_t *)"  ", 2);
     for (int i = 0; i < 16; i++) {
         buffer[0] = *ram++;

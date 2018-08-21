@@ -38,7 +38,8 @@ int main(void)
     // rram, q, i
     uint8_t* rram = 0;
     int q = 0;
-    int xec = 0; // false - do not exec
+    int xec = -1; // true - yes, do exec
+
     /* Initializes MCU, drivers and middleware */
     atmel_start_init();
     SystemInit();
@@ -89,7 +90,7 @@ int main(void)
     // iterate the cdump over 19 lines of 16 bytes each:
     if (xec != 0) {
         for (int jk = 19; jk > 0; jk--) {
-            rram = cdump();
+            rram = cdump(); // dump.c
         }
 
         q = (int)rram;
@@ -104,7 +105,8 @@ int main(void)
 
     /* Replace with your application code */
 
-    rram = ndump(); // nyb_stack.c
+    // rram = ndump(); // nyb_stack.c
+    // rram = cdump();    // dump.c
 
     _cr(); // examples/driver_examples.c
 
