@@ -14,6 +14,8 @@ extern "C" {
 
 extern struct io_descriptor *io;
 
+void _bkbar(void); // broken bar
+void _spc(void);
 void _cr(void);
 void USART_0_example(void);
 
