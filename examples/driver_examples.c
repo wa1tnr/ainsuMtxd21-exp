@@ -118,17 +118,25 @@ void _cr(void) {
     io_write(io, (uint8_t *) "\r\n",         2);
 }
 
-void USART_0_example(void) {
+void USART_0_example_upper(void) {
     usart_sync_get_desc();
     usart_sync_enbl();
     _cr();
-    io_write(io, (uint8_t *) "USART_0_example() .. completes.\r\n", 33); // is alive
-                           // 123456789012345678901234567890123456789012345
-                           //         10        20        30
 }
 
-#ifdef NOT_DEFFINI
-// void trapped(void) {
+void USART_0_example_lower(void) {
+    _cr();
+
+#undef HAS_HELLO_INTERPRETER
+#define HAS_HELLO_INTERPRETER
+#ifndef HAS_HELLO_INTERPRETER
+
+    io_write(io, (uint8_t *) "USART_0_example_upper() .. completes.\r\n", 39); // is alive
+                           // 123456789012345678901234567890123456789012345
+                           //         10        20        30
+#endif // #ifndef HAS_HELLO_INTERPRETER
+
+#ifdef HAS_HELLO_INTERPRETER
 
     io_write(io, (uint8_t *)
         "Program is configured for 38400 bps speed.\r\n\r\n",        46);
@@ -150,17 +158,12 @@ void USART_0_example(void) {
     color_reset();
 
     bg_black();
-    // io_write(io, (uint8_t *)  "\r\n",  2);
     io_write(io, (uint8_t *)"    type something: ",  20);
     bg_black();
 
-
- // fg_white();
     fg_yellow(); // color it!
 
-//  while(-1) { // endless loop, read one char, write one char (echo)
     while(-1) { // endless loop, read one char, write one char (echo)
-
 
         io_read(io,  (uint8_t *)tib, 1); // 1  is length
         buf = (uint8_t *)tib;
@@ -168,8 +171,6 @@ void USART_0_example(void) {
         io_write(io, (uint8_t *)tib, 1); // 1  is also length
         capture_warm();
 
-
     }
-//  }
+#endif // #ifdef HAS_HELLO_INTERPRETER
 }
-#endif // #ifdef NOT_DEFFINI
