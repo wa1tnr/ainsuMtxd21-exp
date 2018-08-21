@@ -106,6 +106,14 @@ void filter(void) {
     }
 }
 
+void _bkbar(void) {
+    io_write(io, (uint8_t *) "|",         1);
+}
+
+void _spc(void) {
+    io_write(io, (uint8_t *) " ",         1);
+}
+
 void _cr(void) {
     io_write(io, (uint8_t *) "\r\n",         2);
 }
