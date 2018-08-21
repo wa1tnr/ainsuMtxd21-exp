@@ -1,5 +1,5 @@
 /* dump.c */
-/* 15 Aug 2018 20:21 UTC */
+/* 21 Aug 2018 00:51 UTC */
 /* wa1tnr, Connecticut USA */
 /* LICENSE: LGPL v2.1 */
 
@@ -78,10 +78,16 @@ uint8_t* cdump(void) {
         parsed_hi(); // print upper nybble out serial port
 
         parsed_low(); // print lower nybble out serial port
+
+        if (i == 7) _spc();
     } // for
 
     ram = (char*)p;
     io_write(io, (uint8_t *)"  ", 2);
+
+    /* FEATURE
+    _bkbar(); // begin stanza
+    */
     for (int i = 0; i < 16; i++) {
         buffer[0] = *ram++;
         if (buffer[0] > 0x7f || buffer[0] < ' ') buffer[0] = '.'; // the dot for unprintable chars
@@ -91,6 +97,11 @@ uint8_t* cdump(void) {
      // at a time:
         io_write(io, (uint8_t *)buffer, 1); // compiles cleanly
     }
+
+    /* FEATURE
+    _bkbar(); // end stanza
+    */
+
     // forth: push(p + 16);
     COUNTER = COUNTER + 16;
     return (uint8_t *)p;
