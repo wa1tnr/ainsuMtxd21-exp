@@ -1,3 +1,6 @@
+// Tue Aug 21 21:23:47 UTC 2018
+// On branch KM_converser_aa-
+
 #include <atmel_start.h>
 #include "driver_examples.h"
 #include "pins.h"
@@ -18,7 +21,6 @@ void blink_two(void) {
         delays();
     }
 }
-
 
 void ldelays(void) {
     for (int ie=7; ie >0; ie--) {
@@ -90,8 +92,16 @@ int main(void)
     // rram = srdump();
 
     // iterate the cdump over 19 lines of 16 bytes each:
+    // for (int jk = 19; jk > 0; jk--) {
+
+    // 0x8000 is ram size (32 kb)
+    // That's 0x800 lines of 16 bytes each
+
+    // 0x40000 size of internal flashROM (256 kb)
     if (xec != 0) {
-        for (int jk = 19; jk > 0; jk--) {
+     // 46 seconds
+     // for (int jk = 0x800; jk > 0; jk--) {
+        for (int jk =   0x7; jk > 0; jk--) { // 7 lines
             rram = cdump(); // dump.c
         }
 
