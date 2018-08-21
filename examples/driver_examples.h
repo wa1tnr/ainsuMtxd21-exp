@@ -17,7 +17,9 @@ extern struct io_descriptor *io;
 void _bkbar(void); // broken bar
 void _spc(void);
 void _cr(void);
-void USART_0_example(void);
+void USART_0_example_upper(void);
+void USART_0_example_lower(void);
+// void USART_0_example(void);
 
 #ifdef __cplusplus
 }
