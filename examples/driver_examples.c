@@ -163,6 +163,7 @@ void USART_0_example_lower(void) {
     while(-1) { // endless loop, read one char, write one char (echo)
         // io_read(io,  (uint8_t *)tib, 1); // 1  is length
         getKey();
+        tib[0] = ch[0];
         buf = (uint8_t *)tib;
         filter();
         io_write(io, (uint8_t *)tib, 1); // 1  is also length
