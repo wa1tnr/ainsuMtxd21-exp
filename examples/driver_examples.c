@@ -1,20 +1,13 @@
 /* Code generated from Atmel Start - overwritten; do make a copy. */
 
-/* warm.c */
-
 /* wa1tnr - August, 2018 LGPL v2.1 */
 
 #include "driver_examples.h"
 #include "driver_init.h"
-
-// maxtib defined in common.h
-#include "../common.h"
-#include "../src/getKey.h"
+#include "common.h"
+#include "getKey.h"
 #include "utils.h"
 #include "warm.h"
-
-/* Terminal Input Buffer for interpreter */
-// #define maxtib 16
 
 struct io_descriptor *io;
 
