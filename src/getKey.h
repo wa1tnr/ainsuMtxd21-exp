@@ -4,5 +4,6 @@
 // On branch KM_converser_aa-
 //     On branch xKM_converser_aa-br-bb-
 
+extern char ch[];
 extern char tib[maxtib]; /* Terminal Input Buffer for interpreter */
 extern void getKey(void); // hardware-independent wrapper
