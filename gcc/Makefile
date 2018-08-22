@@ -73,6 +73,7 @@ src/dump.o \
 src/nyb_stack.o \
 pins.o \
 src/getKey.o \
+src/readword.o \
 main.o
 
 OBJS_AS_ARGS +=  \
@@ -104,6 +105,7 @@ OBJS_AS_ARGS +=  \
 "src/nyb_stack.o" \
 "pins.o" \
 "src/getKey.o" \
+"src/readword.o" \
 "main.o"
 
 # List the dependency files
@@ -138,6 +140,7 @@ DEPS_AS_ARGS +=  \
 "src/nyb_stack.d" \
 "pins.d" \
 "src/getKey.d" \
+"src/readword.d" \
 "main.d"
 
 OUTPUT_FILE_NAME :=AtmelStart
