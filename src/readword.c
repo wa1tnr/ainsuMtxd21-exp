@@ -31,6 +31,10 @@ uint8_t reading(void) {
         io_write(io, (uint8_t *) "\010", 1);
         return 1; // return 1: make the 'while (reading())' last a while longer!
     }
+    if (pos < maxtib) {
+        tib[pos++] = ch_read; // append
+        tib[pos] = 0; // terminate
+    }
     return 1; // ain't done yett..
 }
 
