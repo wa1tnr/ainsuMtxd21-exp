@@ -7,6 +7,8 @@
 #include "common.h"
 #include "driver_examples.h"
 
+char ch[0]; // holds an 8-bit keystroke
+
 // maxtib defined in common.h
 
 /* Terminal Input Buffer for interpreter */
@@ -14,7 +16,8 @@ char tib[maxtib];
 
 void _USART_read(void) { // hardware implementation-dependent keystroke reader
     // getKey:
-    io_read(io,  (uint8_t *)tib, 1); // 1  is length
+ // io_read(io,  (uint8_t *)tib, 1); // 1  is length
+    io_read(io,  (uint8_t *)ch, 1); // 1  is length
 }
 
 void getKey(void) { // hardware-independent wrapper
