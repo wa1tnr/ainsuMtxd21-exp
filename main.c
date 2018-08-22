@@ -4,8 +4,8 @@
 #include <atmel_start.h>
 #include "driver_examples.h"
 #include "pins.h"
-#include "src/dump.h"
-#include "src/nyb_stack.h"
+#include "dump.h"
+#include "nyb_stack.h"
 
 void delays(void) { // delay some
     for (volatile int i=(3*21040); i>0; i--) {
