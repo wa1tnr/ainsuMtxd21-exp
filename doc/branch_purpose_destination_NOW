@@ -1,0 +1,34 @@
+Wed Aug 22 12:56:30 UTC 2018
+
+On branch xKM_converser_aa-br-bb-
+
+This branch is meant to develop only the branch:
+
+On branch KM_converser_aa-
+
+Rather than pollute the namespace (for branches) with
+a branch called 'KM_conv*' this branch follows a new
+course: 
+
+  The intent to merge with another branch that is
+  not the master branch.
+
+This way, development is more compartmentalized on
+the short term; its result will be merged back into
+an existing, well-named (heh) branch.
+
+That's the idea.
+
+TO THAT END, please refer to the 'base' branch of
+
+          xKM_converser_aa-br-bb-
+
+and do *not* bookmark this (very) branch (the xKM_ one)
+as it is not meant to be permanent, but to provide only
+for a short-term audit trail.
+
+Its progress is meant to be reflected in the audit
+trail for its parent (KM_converser_aa-).
+
+22 August 2018, 13:01 UTC
+
