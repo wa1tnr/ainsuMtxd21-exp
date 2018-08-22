@@ -24,6 +24,10 @@ uint8_t reading(void) {
     getKey();
     printing();
     uint8_t ch_read = (uint32_t) ch[0];
+    if (ch_read == '\n') {
+        _cr(); // Serial.print("\r\n"); // echo
+        return 1;
+    }
     if (ch_read == '\r') return 0; // return 0: move onto the next word
     if (ch_read == ' ')  return 0;
     if (ch_read == '\010') { // backspace
