@@ -6,11 +6,15 @@
 
 #include "driver_examples.h"
 #include "driver_init.h"
+
+// maxtib defined in common.h
+#include "../common.h"
+#include "../src/getKey.h"
 #include "utils.h"
 #include "warm.h"
 
 /* Terminal Input Buffer for interpreter */
-#define maxtib 16
+// #define maxtib 16
 
 struct io_descriptor *io;
 
@@ -75,7 +79,7 @@ void fg_yellow(void) { // foreground yellow
  * Example of using USART_0 to write "Hello World" using the IO abstraction.
  */
 
-char tib[maxtib];
+// char tib[maxtib];
 uint8_t *buf;
 
 void filter(void) {
@@ -164,13 +168,12 @@ void USART_0_example_lower(void) {
     fg_yellow(); // color it!
 
     while(-1) { // endless loop, read one char, write one char (echo)
-
-        io_read(io,  (uint8_t *)tib, 1); // 1  is length
+        // io_read(io,  (uint8_t *)tib, 1); // 1  is length
+        getKey();
         buf = (uint8_t *)tib;
         filter();
         io_write(io, (uint8_t *)tib, 1); // 1  is also length
         capture_warm();
-
     }
 #endif // #ifdef HAS_HELLO_INTERPRETER
 }
