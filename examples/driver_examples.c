@@ -165,6 +165,9 @@ void USART_0_example_lower(void) {
         // io_read(io,  (uint8_t *)tib, 1); // 1  is length
         // getKey();
         readword();
+
+        io_write(io, (uint8_t *)"DEBUG: readword has returned.", 29);
+
         tib[0] = ch[0];
         buf = (uint8_t *)tib;
         filter();
