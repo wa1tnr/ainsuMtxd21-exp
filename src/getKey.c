@@ -4,7 +4,6 @@
 // On branch KM_converser_aa-
 //     On branch xKM_converser_aa-br-bb-
 
-// #include "../common.h"
 #include "common.h"
 #include "driver_examples.h"
 
