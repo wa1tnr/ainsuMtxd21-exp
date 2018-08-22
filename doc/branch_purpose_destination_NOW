@@ -1,3 +1,25 @@
+Wed Aug 22 21:21:50 UTC 2018
+
+Expect xKM_converser_aa-br-dd- 
+
+ git $ git merge xKM_converser_aa-br-cc- 
+Updating a0f20c6..172f7cd
+Fast-forward
+ doc/.gitignore                     |  1 +
+ doc/branch_purpose_destination_NOW |  8 ++++++++
+ examples/driver_examples.c         |  5 ++++-
+ gcc/Makefile                       |  3 +++
+ src/.gitignore                     |  1 +
+ src/getKey.c                       |  5 ++++-
+ src/getKey.h                       |  1 +
+ src/readword.c                     | 27 +++++++++++++++++++++++++++
+ src/readword.h                     |  1 +
+ 9 files changed, 50 insertions(+), 2 deletions(-)
+ create mode 100644 doc/.gitignore
+ create mode 100644 src/.gitignore
+ create mode 100644 src/readword.c
+ create mode 100644 src/readword.h
+
 Wed Aug 22 18:49:43 UTC 2018
 
 On branch xKM_converser_aa-br-cc-
