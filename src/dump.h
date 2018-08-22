@@ -3,6 +3,4 @@
 /* wa1tnr, Connecticut USA */
 /* LICENSE: LGPL v2.1 */
 
-extern void say_something(void);
-extern uint8_t* srdump(void);
 extern uint8_t*  cdump(void);
