@@ -1,5 +1,7 @@
 /* Code generated from Atmel Start - overwritten; do make a copy. */
 
+// Thu Aug 23 01:52:11 UTC 2018
+
 /* wa1tnr - August, 2018 LGPL v2.1 */
 
 #include "driver_examples.h"
@@ -126,8 +128,8 @@ void USART_0_example_upper(void) {
 void dispatcher_simple_int(void) {
     // int rval = number();
     if (number() == 911) { // help
-        io_write(io, (uint8_t *) "911 - help\r\n",  12);
-        io_write(io, (uint8_t *) "211 - reboot (warm)\r\n",  21);
+        io_write(io, (uint8_t *) "\r\n\r\n     911 - help\r\n",  21);
+        io_write(io, (uint8_t *) "     211 - reboot (warm)\r\n",  26);
     }
     if (number() == 211) _warm();
 }
