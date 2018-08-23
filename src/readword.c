@@ -31,6 +31,9 @@ uint8_t reading(void) {
     if (ch_read == '\r') return 0; // return 0: move onto the next word
     if (ch_read == ' ')  return 0;
     if (ch_read == '\010') { // backspace
+        if (pos == 0) throw_();
+        tib[pos--] = 0;
+        tib[pos] = 0;
         _spc();
         io_write(io, (uint8_t *) "\010", 1);
         return 1; // return 1: make the 'while (reading())' last a while longer!
