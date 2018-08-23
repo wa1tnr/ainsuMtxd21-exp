@@ -16,6 +16,12 @@ int isNumber() {
     return 1;
 }
 
+/* Convert number in tib */
+int number() {
+  char *endptr;
+  return (int) strtol(tib, &endptr, 0);
+}
+
 void printing(void) {
     uint8_t ch_read = (uint32_t) ch[0];
 
