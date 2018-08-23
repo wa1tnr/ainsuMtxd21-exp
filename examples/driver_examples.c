@@ -168,6 +168,8 @@ void USART_0_example_lower(void) {
 
         io_write(io, (uint8_t *)"DEBUG: readword has returned.", 29);
 
+        if (isNumber()) io_write(io, (uint8_t *)"DEBUG: isNumber: YES.", 21);
+
         tib[0] = ch[0];
         buf = (uint8_t *)tib;
         filter();
