@@ -122,6 +122,17 @@ void USART_0_example_upper(void) {
     _cr();
 }
 
+
+void dispatcher_simple_int(void) {
+    // int rval = number();
+    if (number() == 911) { // help
+        io_write(io, (uint8_t *) "911 - help\r\n",  12);
+        io_write(io, (uint8_t *) "211 - reboot (warm)\r\n",  21);
+    }
+    if (number() == 211) _warm();
+}
+
+
 void USART_0_example_lower(void) {
     _cr();
 
@@ -165,11 +176,11 @@ void USART_0_example_lower(void) {
         // io_read(io,  (uint8_t *)tib, 1); // 1  is length
         // getKey();
         readword();
-
-        io_write(io, (uint8_t *)"DEBUG: readword has returned.", 29);
-
-        if (isNumber()) io_write(io, (uint8_t *)"DEBUG: isNumber: YES.", 21);
-
+        io_write(io, (uint8_t *)"  ~readword~  ", 14);
+        if (isNumber()) {
+            io_write(io, (uint8_t *)"  ~isNumber~  ", 14);
+            dispatcher_simple_int();
+        }
         tib[0] = ch[0];
         buf = (uint8_t *)tib;
         filter();
