@@ -2,7 +2,19 @@
 #include "getKey.h"
 #include "driver_examples.h"
 
+// costs a bit more than 1kb:
+#include "stdlib.h"
+
 uint8_t pos = 0;
+
+/* Is the word in tib a number? */
+int isNumber() {
+    char *endptr;
+    strtol(tib, &endptr, 0);
+    if (endptr == tib) return 0;
+    if (*endptr != '\0') return 0;
+    return 1;
+}
 
 void printing(void) {
     uint8_t ch_read = (uint32_t) ch[0];
