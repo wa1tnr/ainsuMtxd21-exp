@@ -25,7 +25,7 @@ uint8_t reading(void) {
     printing();
     uint8_t ch_read = (uint32_t) ch[0];
     if (ch_read == '\n') {
-        _cr(); // Serial.print("\r\n"); // echo
+        _cr();
         return 1;
     }
     if (ch_read == '\r') return 0; // return 0: move onto the next word
