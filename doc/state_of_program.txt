@@ -1,3 +1,24 @@
+Thu Aug 23 01:03:08 UTC 2018
+
+On branch KM_converser_aa-
+
+The program prints a memory dump with a leading hex
+address in the first columns.
+
+It then goes into interpreter mode, and can differentiate
+an integer typed, from anything else (a string, pretty
+much is the only other option).
+
+No effort made to parse hexadecimal at this juncture.
+
+The branch name is reused by sub-branching and merging.
+
+    xKM_converser_aa-br-dd-  is the current working
+
+developmental branch (its results are merged back into
+branch KM_converser_aa- for consistency).
+
+
 Sun Aug 19 00:07:29 UTC 2018
 
 On branch Hello_World_Conversations
