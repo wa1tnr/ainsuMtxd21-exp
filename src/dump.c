@@ -5,8 +5,10 @@
 
 // On branch KM_converser_aa-
 
-#include "driver_examples.h"
+// #include "driver_examples.h"
+#include "serial_io.h"
 #include "common.h"
+#include "stack_ops.h"
 #include <string.h>
 
 // lower boundary of the memory to examine
@@ -20,7 +22,10 @@
 // change the last number to any positive integer, for an offset:
 // #define LBOUND 0x20000000+(0x0100 * 0)
 
-#define LBOUND 0x1d10+0x10 // Adafruit
+// #define LBOUND 0x1d10+0x10 // Adafruit
+
+// #define LBOUND 0x1f70+0x100 // Adafruit
+#define LBOUND 0x1e70+0x100 // add 0x100 through the stack mechanism, later
 
 /* see main.c for how many lines of memory to dump.
    It may be a very large number!
@@ -82,8 +87,11 @@ int COUNTER = 0;
 uint8_t* cdump(void) {
     char buffer[5] = "";
     char *ram;
-    int p = LBOUND+COUNTER ;
-    ram = (char*)p;
+    // int adptr = LBOUND+COUNTER ;
+    int adptr = pop(); // LBOUND+COUNTER ;
+    // push(0x100); // can put in any value, it's an offset to see a specific segment of SRAM
+    // adptr = adptr + pop();
+    ram = (char*)adptr;
 
     io_write(io, (uint8_t *)"\015\012", 2); // CRLF
  // io_write(io, (uint8_t *)"  ", 2);
@@ -143,7 +151,7 @@ uint8_t* cdump(void) {
         if (i == 7) _spc();
     } // for
 
-    ram = (char*)p;
+    ram = (char*)adptr;
 
 
     io_write(io, (uint8_t *)"   ", 3); // white space column separating hex from ASCII
@@ -168,5 +176,5 @@ uint8_t* cdump(void) {
 
     // forth: push(p + 16);
     COUNTER = COUNTER + 16;
-    return (uint8_t *)p;
+    return (uint8_t *)adptr;
 }
