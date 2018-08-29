@@ -1,9 +1,12 @@
-// Wed Aug 29 23:29:01 UTC 2018
-// On branch KM_converser_d21
+// Wed Aug 29 23:34:57 UTC 2018
+// On branch xKM_converser_d21-pp-
 
 /* wa1tnr - August, 2018 LGPL v2.1 */
 
 // previous:
+// Wed Aug 29 23:29:01 UTC 2018
+// On branch KM_converser_d21
+
 // Wed Aug 29 22:55:07 UTC 2018
 // On branch KM_converser_TRIAL_run-
 
@@ -22,15 +25,15 @@
 #include "debugging.h"
 #include "dict_common.h"
 
-#define timeStamp(t,l)   "Wed Aug 29 23:29:01 UTC 2018\r\n\r\n", 32
-
+#define timeStamp(t,l)   "Wed Aug 29 23:34:57 UTC 2018\r\n\r\n", 32
 /*
 #define branchStamp(b,l) "KM_converser_TRIAL_run-  ", 25
 */
+#define branchStamp(b,l) "xKM_converser_d21-pp-    ", 25
 
-#define branchStamp(b,l) "KM_converser_d21         ", 25
 
 /*
+#define branchStamp(b,l) "KM_converser_d21         ", 25
 #define branchStamp(b,l) "KM_converser_d51         ", 25
 */
 
