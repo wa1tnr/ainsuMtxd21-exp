@@ -1,9 +1,12 @@
-// Wed Aug 29 22:55:07 UTC 2018
-// On branch KM_converser_TRIAL_run-
+// Wed Aug 29 23:29:01 UTC 2018
+// On branch KM_converser_d21
 
 /* wa1tnr - August, 2018 LGPL v2.1 */
 
 // previous:
+// Wed Aug 29 22:55:07 UTC 2018
+// On branch KM_converser_TRIAL_run-
+
 // Wed Aug 29 05:07:42 UTC 2018
 // On branch xKM_converser_d51-nn-
 
@@ -19,9 +22,13 @@
 #include "debugging.h"
 #include "dict_common.h"
 
-#define timeStamp(t,l)   "Wed Aug 29 22:55:07 UTC 2018\r\n\r\n", 32
+#define timeStamp(t,l)   "Wed Aug 29 23:29:01 UTC 2018\r\n\r\n", 32
 
+/*
 #define branchStamp(b,l) "KM_converser_TRIAL_run-  ", 25
+*/
+
+#define branchStamp(b,l) "KM_converser_d21         ", 25
 
 /*
 #define branchStamp(b,l) "KM_converser_d51         ", 25
@@ -30,7 +37,6 @@
 /*
 #define branchStamp(b,l) "master                   ", 25
 */
-
 
 struct io_descriptor *io;
 
@@ -182,9 +188,9 @@ void USART_0_example_lower(void) {
     io_write(io, (uint8_t *)
         "Program is configured for 38400 bps speed.\r\n\r\n",        46);
     io_write(io, (uint8_t *)
-        "Target MCU board is Adafruit Metro M4 Express.\r\n\r\n",    50);
+    //  "Target MCU board is Adafruit Metro M4 Express.\r\n\r\n",    50);
 
-    //  "Target MCU board is Adafruit Feather M0 Express.\r\n\r\n",  52);
+        "Target MCU board is Adafruit Feather M0 Express.\r\n\r\n",  52);
 
     color_reset();
 
