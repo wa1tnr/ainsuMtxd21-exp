@@ -15,7 +15,8 @@
 /*                                                    */
 /* intent:  add '1' to the contents of a variable     */
 
-#include "driver_examples.h"
+// #include "driver_examples.h"
+#include "serial_io.h"
 #include "common.h"
 #include <string.h>
 
