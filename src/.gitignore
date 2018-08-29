@@ -1,1 +1,9 @@
 interpret_m4*
+dump.c---d21
+dump.h---d21
+getKey.c---d21
+getKey.h---d21
+nyb_stack.c---d21
+nyb_stack.h---d21
+readword.c---d21
+readword.h---d21
