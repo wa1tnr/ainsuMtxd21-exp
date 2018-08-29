@@ -1,7 +1,11 @@
-// Wed Aug 29 05:07:42 UTC 2018
-// On branch xKM_converser_d51-nn-
+// Wed Aug 29 22:55:07 UTC 2018
+// On branch KM_converser_TRIAL_run-
 
 /* wa1tnr - August, 2018 LGPL v2.1 */
+
+// previous:
+// Wed Aug 29 05:07:42 UTC 2018
+// On branch xKM_converser_d51-nn-
 
 #include "serial_io.h"
 #include "driver_init.h"
@@ -15,11 +19,9 @@
 #include "debugging.h"
 #include "dict_common.h"
 
-#define timeStamp(t,l)   "Wed Aug 29 05:07:42 UTC 2018\r\n\r\n", 32
+#define timeStamp(t,l)   "Wed Aug 29 22:55:07 UTC 2018\r\n\r\n", 32
 
-
-#define branchStamp(b,l) "xKM_converser_d51-nn-    ", 25
-
+#define branchStamp(b,l) "KM_converser_TRIAL_run-  ", 25
 
 /*
 #define branchStamp(b,l) "KM_converser_d51         ", 25
@@ -28,7 +30,6 @@
 /*
 #define branchStamp(b,l) "master                   ", 25
 */
-
 
 
 struct io_descriptor *io;
