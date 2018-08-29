@@ -26,6 +26,11 @@ else
 endif
 
 CFLAGS = -Wall -Werror
+CFLAGS += -DADAFRUIT_FEATHER_M0_EXPRESS 
+
+# CFLAGS += -DADAFRUIT_METRO_M4_EXPRESS
+# CFLAGS += -D__SAMD51J19A__ -DADAFRUIT_METRO_M4_EXPRESS -D__SAMD51__
+# CFLAGS += -D__SAMD21G18A__ -DADAFRUIT_METRO_M0_EXPRESS
 
 # List the subdirectories for creating object files
 SUB_DIRS +=  \
@@ -61,7 +66,6 @@ hpl/gclk/hpl_gclk.o \
 hal/src/hal_init.o \
 samd21a/gcc/system_samd21.o \
 examples/driver_examples.o \
-examples/warm.o \
 driver_init.o \
 hpl/sercom/hpl_sercom.o \
 hal/src/hal_gpio.o \
@@ -69,6 +73,15 @@ hal/utils/src/utils_event.o \
 hal/src/hal_sleep.o \
 atmel_start.o \
 hal/src/hal_atomic.o \
+src/serial_io.o \
+src/warm.o \
+src/clock_gen_OE.o \
+src/stack_ops.o \
+src/itoa.o \
+src/dict.o \
+src/runword.o \
+src/math.o \
+src/ascii_art.o \
 src/dump.o \
 src/nyb_stack.o \
 pins.o \
@@ -93,7 +106,6 @@ OBJS_AS_ARGS +=  \
 "hal/src/hal_init.o" \
 "samd21a/gcc/system_samd21.o" \
 "examples/driver_examples.o" \
-"examples/warm.o" \
 "driver_init.o" \
 "hpl/sercom/hpl_sercom.o" \
 "hal/src/hal_gpio.o" \
@@ -101,6 +113,15 @@ OBJS_AS_ARGS +=  \
 "hal/src/hal_sleep.o" \
 "atmel_start.o" \
 "hal/src/hal_atomic.o" \
+"src/serial_io.o" \
+"src/warm.o" \
+"src/clock_gen_OE.o" \
+"src/stack_ops.o" \
+"src/itoa.o" \
+"src/dict.o" \
+"src/runword.o" \
+"src/math.o" \
+"src/ascii_art.o" \
 "src/dump.o" \
 "src/nyb_stack.o" \
 "pins.o" \
@@ -126,7 +147,6 @@ DEPS_AS_ARGS +=  \
 "hpl/gclk/hpl_gclk.d" \
 "hal/src/hal_init.d" \
 "hal/src/hal_usart_sync.d" \
-"examples/warm.d" \
 "driver_init.d" \
 "samd21a/gcc/system_samd21.d" \
 "examples/driver_examples.d" \
@@ -136,6 +156,15 @@ DEPS_AS_ARGS +=  \
 "hal/src/hal_atomic.d" \
 "hpl/pm/hpl_pm.d" \
 "atmel_start.d" \
+"src/serial_io.d" \
+"src/warm.d" \
+"src/clock_gen_OE.d" \
+"src/stack_ops.d" \
+"src/itoa.d" \
+"src/dict.d" \
+"src/runword.d" \
+"src/math.d" \
+"src/ascii_art.d" \
 "src/dump.d" \
 "src/nyb_stack.d" \
 "pins.d" \
